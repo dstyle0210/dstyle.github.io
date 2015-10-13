@@ -1,0 +1,21 @@
+{
+  "name": "dstyle.github.io",
+  "version": "1.0.0",
+  "description": "Dstyle : Web Publisher , Front-End Developer",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dstyle0210/dstyle.github.io.git"
+  },
+  "author": "Dstyle",
+  "license": "Creative Commons License (CC BY-NC-ND)",
+  "bugs": {
+    "url": "https://github.com/dstyle0210/dstyle.github.io/issues"
+  },
+  "homepage": "https://github.com/dstyle0210/dstyle.github.io#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
