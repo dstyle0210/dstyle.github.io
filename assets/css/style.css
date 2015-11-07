@@ -1,39 +1,314 @@
 body {
-  color: #333;
+  background: url('../images/bg.png');
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+.btn span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.btn.papers span {
+  font-family: 'Poiret One', cursive;
+  font-weight: 700;
+}
+.btn.sitemaps span {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn.imagemap span {
+  font-family: 'Pacifico', cursive;
+}
+.dstyleWrap {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 20px auto;
   background: #fff;
+  max-width: 1000px;
+  border-radius: 7px;
 }
-body {
+.dstyleWrap .stitch {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+  border: 1px dashed #666;
+  border-radius: 5px;
+}
+.dstyleWrap .topLine {
+  margin-top: -5px;
+  width: 100%;
+  height: 10px;
+  background: #d9534f;
+}
+.lazyCase {
+  display: inline-block;
+  width: 100%;
   height: 100%;
-  background-color: #ffffff;
-  background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-  background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-size: 100px 100px, cover,				cover;
-  background-position: top left,		center center,		bottom center;
-  background-attachment: fixed,			fixed,				fixed;
+  overflow: hidden;
+  background: #f5f5f5 url('../images/ajax-loader.gif') no-repeat center center;
 }
-body:after {
-  content: '';
-  display: block;
-  position: fixed;
+.lazyError {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.lazyCase > img,
+.lazyParent > img {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.secH2 {
+  padding-bottom: 20px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.secH2 > strong {
+  display: inline-block;
+  padding-right: 20px;
+  background: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.secH2 > span {
+  display: inline-block;
+  padding-top: 8px;
+  float: right;
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 12px;
+  color: #666;
+}
+.profileSec {
+  position: relative;
+  padding: 50px 0 30px;
+  width: 100%;
+  overflow: hidden;
+}
+.profileSec .photo {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 150px;
+}
+.profileSec .info {
+  text-align: center;
+}
+.profileSec .info * {
+  margin: 0;
+  padding: 0;
+}
+.profileSec .info h1 {
+  padding-top: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+}
+.profileSec .info p.job {
+  padding-top: 15px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #666;
+}
+.profileSec .info p.desc {
+  padding-top: 5px;
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 16px;
+  color: #666;
+}
+.profileSec .goto {
+  text-align: center;
+  padding-top: 10px;
+}
+.cvSec {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.cvSec > section {
+  padding-top: 30px;
+}
+.cvSec > section:first-child {
+  padding-top: 0;
+}
+.cvSec .informationWrap dl {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #dadada;
+}
+.cvSec .informationWrap dt,
+.cvSec .informationWrap dd {
+  padding: 0 0 5px 5px;
+  float: left;
+}
+.cvSec .positionWrap dt {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.cvSec .msites {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.cvSec .msites > a {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: inherit;
-  opacity: 0;
-  z-index: 1;
-  background-color: #ffffff;
-  background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-  background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-  background-repeat: repeat, no-repeat;
-  background-size: 100px 100px, cover;
-  background-position: top left,		center center;
-  -moz-transition: opacity 1.75s ease-out;
-  -webkit-transition: opacity 1.75s ease-out;
-  -ms-transition: opacity 1.75s ease-out;
-  transition: opacity 1.75s ease-out;
+  width: 90px;
 }
+.cvSec .msites > a.papers {
+  background: #333;
+  color: #f0ad4e;
+}
+.cvSec .msites > a.papers > span {
+  color: #fff;
+}
+.cvSec .msites > a.sitemaps {
+  color: #d9534f;
+}
+.cvSec .msites > a.sitemaps > span {
+  color: #333;
+}
+.cvSec .msites > a.imagemap {
+  color: #5bc0de;
+}
+.cvSec .msites > a.imagemap > span {
+  color: #333;
+}
+.cvSec .msites > a.imagemap > span > i {
+  color: #5bc0de;
+}
+.cvSec .msites > div {
+  padding-left: 100px;
+  min-height: 70px;
+}
+.experienceSec {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.experienceSec > article ul,
+.experienceSec > article li {
+  margin: 0;
+  padding: 0;
+}
+.experienceSec > article li {
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+.experienceSec > article li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.experienceSec .workfor {
+  position: relative;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+.experienceSec .workfor h3 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #333;
+}
+.experienceSec .workfor p {
+  padding: 10px 0 0 0;
+  margin: 0;
+  color: #666;
+}
+.experienceSec .workfor span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.experienceSec .workfor .label {
+  padding: 6px 10px 4px;
+  font-size: 12px;
+}
+.skillsSec {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.skillsSec div > section {
+  padding-top: 20px;
+}
+.skillsSec div > section:first-child {
+  padding-top: 0;
+}
+.skillsSec .positionSkills {
+  width: 100%;
+  overflow: hidden;
+}
+.skillsSec .positionSkills h3 {
+  padding-bottom: 15px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.skillsSec .skill {
+  float: left;
+  width: 33%;
+  height: 140px;
+}
+.skillsSec .skill .chart {
+  position: relative;
+  margin: 0 auto;
+  width: 80px;
+}
+.skillsSec .skill .chart > span {
+  position: absolute;
+  top: 32px;
+  left: 27px;
+}
+.skillsSec .skill h4 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+.skillsSec .skill h4 span {
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 13px;
+}
+/*
+.profileSec{position:relative;margin:50px 0;width:100%;overflow:hidden;
+  .photo{float:left;box-sizing:border-box;padding:10px;border:1px solid #ccc;width:150px;height:150px;}
+  .info{float:left;padding-left:20px;
+    *{margin:0;padding:0;}
+    h1{padding-top:36px;.eng(400);font-size:44px;}
+    p.job{padding-top:15px;.engsub();font-size:18px;text-transform: uppercase;color:#666;}
+    p.desc{padding-top:5px;.kor();font-size:16px;color:#666;}
+  }
+  .goto{position:absolute;top:0;right:0;}
+}
+*/
