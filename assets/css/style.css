@@ -29,6 +29,9 @@ h6 {
 .btn.imagemap span {
   font-family: 'Pacifico', cursive;
 }
+.label {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .dstyleWrap {
   box-sizing: border-box;
   padding: 5px;
@@ -299,6 +302,30 @@ h6 {
   font-weight: 400;
   letter-spacing: -1px;
   font-size: 13px;
+}
+.portfolioSec {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.portfolioSec .portfolioList {
+  margin: 0;
+  padding: 0;
+}
+.portfolioSec .portfolioList > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contactSec {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.contactSec .descList {
+  padding-left: 15px;
 }
 /*
 .profileSec{position:relative;margin:50px 0;width:100%;overflow:hidden;
