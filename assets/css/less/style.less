@@ -5,6 +5,7 @@
 @brand-warning:#f0ad4e;
 @brand-danger:#d9534f;
 body{background:url('../images/bg.png');.kor();font-size:13px;letter-spacing:0;}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{overflow:hidden;}
 
 
 // bootstrap custom or add
@@ -16,7 +17,7 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 .label{font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;}
 
 
-.dstyleWrap{box-sizing:border-box;padding:5px;margin:20px auto;background:#fff;max-width:1000px;border-radius:7px;
+.dstyleWrap{position:relative;box-sizing:border-box;padding:5px;margin:20px auto;background:#fff;max-width:1000px;border-radius:7px;
    .stitch{box-sizing:border-box;width:100%;padding:0 20px;border:1px dashed #666;border-radius:5px;}
    .topLine{margin-top:-5px;width:100%;height:10px;background:@brand-danger;}
 }
@@ -30,7 +31,6 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 
 // 공통 : 타이틀
 .secH2{padding-bottom:20px;width:100%;text-transform: uppercase;
-  // background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozNThlZjI2YS02MGEyLWM2NDMtOWVjMC1kODc1NjljYzZiYmUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM3Q0JGQzI4NTA3MTFFNUFFOTdEMjM0Qjg1NjY3NkUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM3Q0JGQzE4NTA3MTFFNUFFOTdEMjM0Qjg1NjY3NkUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzlmMzIzODEtYjhhOC1mMzQxLWIzMjktNjhjYWY1MDAwZWViIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM1OGVmMjZhLTYwYTItYzY0My05ZWMwLWQ4NzU2OWNjNmJiZSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjTp27wAAAAPSURBVHjaYrh16xZAgAEABSACjyjhH/8AAAAASUVORK5CYII=') repeat-x left center;
   >strong{display:inline-block;padding-right:20px;background: #ffffff;.eng();font-size:24px;}
   >span{display:inline-block;padding-top:8px;float:right;.kor();font-size:12px;color:#666;}
 }
@@ -49,7 +49,7 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 }
 
 // 인적정보
-.cvSec{position:relative;padding:30px 0;width:100%;overflow:hidden;
+.cvSec{position:relative;padding:30px 0;overflow:hidden;
   >section{padding-top:30px;&:first-child{padding-top:0;}}
   .informationWrap{
     dl{width:100%;overflow:hidden;border-bottom:1px solid #dadada;}
@@ -58,27 +58,32 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
   .positionWrap{
     dt{.engsub(400);font-size:18px;}
   }
+  @media (min-width: 768px) {
+    .positionSec{padding-top:0;}
+  }
+}
+// 경력,스킬
+.exSec{position:relative;padding:30px 0;overflow:hidden;}
 
   // 관리중인 사이트
-  .msites{width:100%;  overflow: hidden;position:relative;
-    >a{position:absolute;top:0;left:0;width:90px;}
-    >a.papers{background:#333;color:@brand-warning;
-      >span{color:#fff;}
-    }
-    >a.sitemaps{color: @brand-danger;
-      >span{color:#333;}
-    }
-    >a.imagemap{color: @brand-info;
-      >span{color:#333;
-        >i{color: @brand-info;}
-      }
-    }
-    >div{padding-left:100px;min-height:70px;}
+.msites{overflow: hidden;position:relative;
+  >a{position:absolute;top:0;left:0;width:90px;}
+  >a.papers{background:#333;color:@brand-warning;
+    >span{color:#fff;}
   }
+  >a.sitemaps{color: @brand-danger;
+    >span{color:#333;}
+  }
+  >a.imagemap{color: @brand-info;
+    >span{color:#333;
+      >i{color: @brand-info;}
+    }
+  }
+  >div{padding-left:100px;min-height:70px;}
 }
 
 // 일한곳
-.experienceSec{position:relative;padding:30px 0;width:100%;overflow:hidden;
+.experienceSec{position:relative;padding-top:30px;padding-bottom:30px;overflow:hidden;
   >article{
     ul,li{margin:0;padding:0;}
     li{
@@ -98,13 +103,14 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 
 
 // 기술수준
-.skillsSec{position:relative;padding:30px 0;width:100%;overflow:hidden;
-  div>section{padding-top:20px;&:first-child{padding-top:0;}}
-  .positionSkills{width:100%;overflow:hidden;
-    h3{padding-bottom:15px;.engsub(400);font-size:18px;}
+.skillsSec{position:relative;padding-top:30px;padding-bottom:30px;overflow:hidden;
+  .positionSkills{overflow:hidden;
+    h3{padding-bottom:15px;.eng(300);font-size:18px;
+      @media (min-width: 768px) {  &{padding-left:35px;padding-top:20px;.eng(300);font-size:24px;color:#666;}  }
+    }
   }
 
-  .skill{float:left;width:33%;height:140px;
+  .skill{height:140px;
     .chart{position:relative;margin:0 auto;width:80px;
       >span{position:absolute;top:32px;left:27px;}
     }
@@ -115,7 +121,10 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 }
 
 
-.portfolioSec{position:relative;padding:30px 0;width:100%;overflow:hidden;
+.portfolioSec{position:relative;padding-top:30px;padding-bottom:30px;overflow:hidden;
+  @media (min-width: 768px) {
+    &{padding-top:0;}
+  }
   .portfolioList{margin:0;padding:0;
     >li{margin:0;padding:0;list-style:none;}
   }
@@ -123,10 +132,16 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 
 .contactSec{position:relative;padding:30px 0;width:100%;overflow:hidden;
   .descList{padding-left:15px;}
+  .btnSec{text-align:right;}
 }
 
 
 
+// 풋터
+footer{.engsub();padding-bottom:20px;text-align:center;color:#fff;font-size:14px;}
+
+// 메뉴
+.menu{position:absolute;top:20px;right:20px;z-index:100;}
 
 /*
 .profileSec{position:relative;margin:50px 0;width:100%;overflow:hidden;

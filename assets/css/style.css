@@ -6,6 +6,56 @@ body {
   font-size: 13px;
   letter-spacing: 0;
 }
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -33,6 +83,7 @@ h6 {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .dstyleWrap {
+  position: relative;
   box-sizing: border-box;
   padding: 5px;
   margin: 20px auto;
@@ -146,7 +197,6 @@ h6 {
 .cvSec {
   position: relative;
   padding: 30px 0;
-  width: 100%;
   overflow: hidden;
 }
 .cvSec > section {
@@ -170,47 +220,56 @@ h6 {
   font-weight: 400;
   font-size: 18px;
 }
-.cvSec .msites {
-  width: 100%;
+@media (min-width: 768px) {
+  .cvSec .positionSec {
+    padding-top: 0;
+  }
+}
+.exSec {
+  position: relative;
+  padding: 30px 0;
+  overflow: hidden;
+}
+.msites {
   overflow: hidden;
   position: relative;
 }
-.cvSec .msites > a {
+.msites > a {
   position: absolute;
   top: 0;
   left: 0;
   width: 90px;
 }
-.cvSec .msites > a.papers {
+.msites > a.papers {
   background: #333;
   color: #f0ad4e;
 }
-.cvSec .msites > a.papers > span {
+.msites > a.papers > span {
   color: #fff;
 }
-.cvSec .msites > a.sitemaps {
+.msites > a.sitemaps {
   color: #d9534f;
 }
-.cvSec .msites > a.sitemaps > span {
+.msites > a.sitemaps > span {
   color: #333;
 }
-.cvSec .msites > a.imagemap {
+.msites > a.imagemap {
   color: #5bc0de;
 }
-.cvSec .msites > a.imagemap > span {
+.msites > a.imagemap > span {
   color: #333;
 }
-.cvSec .msites > a.imagemap > span > i {
+.msites > a.imagemap > span > i {
   color: #5bc0de;
 }
-.cvSec .msites > div {
+.msites > div {
   padding-left: 100px;
   min-height: 70px;
 }
 .experienceSec {
   position: relative;
-  padding: 30px 0;
-  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   overflow: hidden;
 }
 .experienceSec > article ul,
@@ -256,29 +315,30 @@ h6 {
 }
 .skillsSec {
   position: relative;
-  padding: 30px 0;
-  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   overflow: hidden;
 }
-.skillsSec div > section {
-  padding-top: 20px;
-}
-.skillsSec div > section:first-child {
-  padding-top: 0;
-}
 .skillsSec .positionSkills {
-  width: 100%;
   overflow: hidden;
 }
 .skillsSec .positionSkills h3 {
   padding-bottom: 15px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
   font-size: 18px;
 }
+@media (min-width: 768px) {
+  .skillsSec .positionSkills h3 {
+    padding-left: 35px;
+    padding-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #666;
+  }
+}
 .skillsSec .skill {
-  float: left;
-  width: 33%;
   height: 140px;
 }
 .skillsSec .skill .chart {
@@ -305,9 +365,14 @@ h6 {
 }
 .portfolioSec {
   position: relative;
-  padding: 30px 0;
-  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .portfolioSec {
+    padding-top: 0;
+  }
 }
 .portfolioSec .portfolioList {
   margin: 0;
@@ -326,6 +391,23 @@ h6 {
 }
 .contactSec .descList {
   padding-left: 15px;
+}
+.contactSec .btnSec {
+  text-align: right;
+}
+footer {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
 }
 /*
 .profileSec{position:relative;margin:50px 0;width:100%;overflow:hidden;
