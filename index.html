@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <!--
+    TODO meta 데이터 연결 및 정리.
+    TODO 파비콘 만들어서 넣기
+
     <meta name="keywords" content="스마트디바이스,스마트폰,태블릿,안드로이드,스마트폰, 태블릿, 안드로이드, 갤럭시, 갤럭시 노트, 갤럭시S4, Samsung Galaxy, Samsung Galaxy S4, Samsung Galaxy Note, 울트라북, 아이폰, 아이폰5, 갤럭시S5, 갤럭시 S5,기어2,기어 2,기어핏,Samsung Galaxy S5," />
 <meta name="description" content="스마트 디바이스(Smart Device), " />
 <meta name="Location" content="South Korea" />
@@ -13,10 +16,12 @@
 <meta http-equiv="Cache-Control" content="No-Cache">
 <meta http-equiv="Pragma" content="No-Cache">
 <meta name="content-language" content="kr">
--->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
     <meta name="description" content="Font Awesome, the iconic font and CSS framework">
     <meta name="author" content="Dave Gandy">
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
@@ -35,152 +40,172 @@
 </head>
 <body>
 <section class="dstyleWrap" id="dstyleWrap">
-
+    <div class="topLine"></div>
     <section class="menu">
         <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-bars"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-right">
-                <li><a href="#informationSec">INFORMATION</a></li>
-                <li><a href="#positionSec">POSITION</a></li>
-                <li><a href="#maintainedSec">MAINTAINED</a></li>
-                <li><a href="#experienceSec">WORK EXPERIENCE</a></li>
-                <li><a href="#skillsSec">TECHNICAL SKILLS</a></li>
-                <li><a href="#portfolioSec">PORTFOLIO</a></li>
-                <li><a href="#contactSec">CONTACT</a></li>
+                <li><a href="index.html#informationSec">INFORMATION</a></li>
+                <li><a href="index.html#positionSec">POSITION</a></li>
+                <li><a href="index.html#maintainedSec">MAINTAINED</a></li>
+                <li><a href="index.html#experienceSec">WORK EXPERIENCE</a></li>
+                <li><a href="index.html#skillsSec">TECHNICAL SKILLS</a></li>
+                <li><a href="index.html#portfolioSec">PORTFOLIO</a></li>
+                <li><a href="index.html#contactSec">CONTACT</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
                 <li><a href="#">BLOG</a></li>
             </ul>
         </div>
     </section>
 
     <div class="stitch">
-        <div class="topLine"></div>
+
 
         <!-- 프로필 -->
-        <section class="profileSec" id="profileSec">
-            <div class="photo lazyParent"><img src="" data-original="http://img.publichs.com/ECMCFO/images/event/inc/event20151030001/event20151030001_ec.jpg2" alt="내사진" class="lazy" /></div>
-            <article class="info">
-                <h1>Dstyle</h1>
-                <p class="job">Web Publisher , Front-End Developer</p>
-                <p class="desc">웹퍼블리셔, 프론트앤드 개발자로 활동하고 있습니다.</p>
-            </article>
-            <div class="goto">
-                <a href="https://github.com/dstyle0210?tab=repositories" class="btn btn-default"><i class="fa fa-github-square"></i> <span>Github</span></a>
-                <a href="mailto:dstyle0210@gmail.com" class="btn btn-default"><i class="fa fa-envelope-o"></i> <span>Email</span></a>
+        <section class="profileSec row" id="profileSec">
+            <div class="col-xs-12 col-sm-3 col-md-2">
+                <div class="photo lazyParent"><img src="" data-original="http://img.publichs.com/ECMCFO/images/event/inc/event20151030001/event20151030001_ec.jpg2" alt="내사진" class="lazy" /></div>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-7">
+                <article class="info">
+                    <h1>Dstyle</h1>
+                    <p class="job">Web Publisher , Front-End Developer</p>
+                    <p class="desc">웹퍼블리셔, 프론트앤드 개발자로 활동하고 있습니다.</p>
+                </article>
+            </div>
+            <div class="col-xs-12 col-xs-offset-0 col-sm-9 col-sm-offset-3 col-md-3 col-md-offset-0">
+                <div class="goto">
+                    <a href="https://github.com/dstyle0210" class="btn btn-default"><i class="fa fa-github-square"></i> <span>Github</span></a>
+                    <a href="mailto:dstyle0210@gmail.com" class="btn btn-default"><i class="fa fa-envelope-o"></i> <span>Email</span></a>
+                </div>
             </div>
         </section>
         <!-- // 프로필 -->
 
+
+
         <!-- 인적정보 -->
         <section class="cvSec row" id="cvSec">
             <!-- 기본정보 -->
-            <section class="informationSec col-xs-12 col-sm-5" id="informationSec">
-                <h2 class="secH2"><strong>Information</strong> <span>기본정보</span></h2>
-                <article class="informationWrap" id="informationWrap">
-                    <div id="jsxInformation">
-                        <dl>
-                            <dt>이름 :</dt>
-                            <dd> 원용봉(Yong Bong, Won)</dd>
-                        </dl>
-                        <dl>
-                            <dt>생년월일 :</dt>
-                            <dd>1983.10.11 (만 33세)</dd>
-                        </dl>
-                        <dl>
-                            <dt>경력기간 :</dt>
-                            <dd>만 11년 8개월</dd>
-                        </dl>
-                        <dl>
-                            <dt>주소 :</dt>
-                            <dd>서울 은평구 녹번동</dd>
-                        </dl>
-                        <dl>
-                            <dt>이메일 :</dt>
-                            <dd><a href="mailto:dstyle0210@gmail.com">dstyle0210@gmail.com</a></dd>
-                        </dl>
-                    </div>
-                </article>
-            </section>
+            <div class="col-xs-12 col-sm-5">
+                <section class="informationSec" id="informationSec">
+                    <h2 class="secH2"><strong>Information</strong> <span>기본정보</span></h2>
+                    <article class="informationWrap" id="informationWrap">
+                        <div id="jsxInformation">
+                            <dl>
+                                <dt>이름 :</dt>
+                                <dd> 원용봉(Yong Bong, Won)</dd>
+                            </dl>
+                            <dl>
+                                <dt>생년월일 :</dt>
+                                <dd>1983.10.11 (만 33세)</dd>
+                            </dl>
+                            <dl>
+                                <dt>경력기간 :</dt>
+                                <dd>만 11년 8개월</dd>
+                            </dl>
+                            <dl>
+                                <dt>주소 :</dt>
+                                <dd>서울 은평구 녹번동</dd>
+                            </dl>
+                            <dl>
+                                <dt>이메일 :</dt>
+                                <dd><a href="mailto:dstyle0210@gmail.com">dstyle0210@gmail.com</a></dd>
+                            </dl>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <!-- // 기본정보 -->
 
             <!-- 서비스 -->
-            <section class="positionSec col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-1" id="positionSec">
-                <h2 class="secH2"><strong>Position</strong> <span>업무영역</span></h2>
-                <article class="positionWrap" id="positionWrap">
-                    <div id="jsxPosition">
-                        <dl>
-                            <dt>Web Publisher</dt>
-                            <dd>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width: 95%">
-                                        95%
+            <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-1">
+                <section class="positionSec" id="positionSec">
+                    <h2 class="secH2"><strong>Position</strong> <span>업무영역</span></h2>
+                    <article class="positionWrap" id="positionWrap">
+                        <div id="jsxPosition">
+                            <dl>
+                                <dt>Web Publisher</dt>
+                                <dd>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width: 95%">
+                                            95%
+                                        </div>
                                     </div>
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Front-End Developer</dt>
-                            <dd>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width: 35%">
-                                        35%
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>Front-End Developer</dt>
+                                <dd>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" style="width: 35%">
+                                            35%
+                                        </div>
                                     </div>
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>Project Leader or Ace</dt>
-                            <dd>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" style="width: 82%">
-                                        82%
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>Project Leader or Ace</dt>
+                                <dd>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" style="width: 82%">
+                                            82%
+                                        </div>
                                     </div>
-                                </div>
-                            </dd>
-                        </dl>
-                    </div>
-                </article>
-            </section>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <!-- // 서비스 -->
 
             <!-- 관리중인 사이트 -->
-            <section class="maintainedSec col-xs-12" id="maintainedSec">
-                <h2 class="secH2"><strong>Maintained</strong> <span>관리중인 사이트</span></h2>
-                <article class="maintainedWrap" id="maintainedWrap">
-                    <div id="jsxMaintained row">
-                        <section class="msites col-xs-12 col-sm-6 col-md-4">
-                            <a href="http://dstyle0210.github.io/papers/" class="btn btn-default papers">
-                                <i class="fa fa-list-ul fa-2x"></i><br /><span>Papers</span>
-                            </a>
-                            <div>
-                                <p>웹사이트 구축진행사항 확인표(by google spreadsheet)</p>
-                                <p>RWD , angular + bootstrap</p>
+            <div class="col-xs-12">
+                <section class="maintainedSec" id="maintainedSec">
+                    <h2 class="secH2"><strong>Maintained</strong> <span>관리중인 사이트</span></h2>
+                    <article class="maintainedWrap" id="maintainedWrap">
+                        <div class="row" id="jsxMaintained">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <section class="mysites papers">
+                                    <a href="http://dstyle0210.github.io/papers/" class="btn btn-fixed btn-papers">
+                                        <i class="fa fa-list-ul fa-2x"></i><br /><span>Papers</span>
+                                    </a>
+                                    <div>
+                                        <p>웹사이트 구축진행사항 확인표<br />(by google spreadsheet)</p>
+                                        <p>RWD , Angularjs + bootstrap</p>
+                                    </div>
+                                </section>
                             </div>
-                        </section>
-                        <section class="msites col-xs-12 col-sm-6 col-md-4">
-                            <a href="http://dstyle0210.github.io/sitemap/ang/" class="btn btn-default sitemaps">
-                                <i class="fa fa-bookmark fa-2x"></i><br /><span>sitemaps</span>
-                            </a>
-                            <div>
-                                <p>퍼블리셔를 위한 즐겨찾기 (by google spreadsheet)</p>
-                                <p>RWD , React + bootstrap</p>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <section class="mysites sitemaps">
+                                    <a href="http://dstyle0210.github.io/sitemap/ang/" class="btn btn-fixed btn-sitemaps">
+                                        <i class="fa fa-bookmark fa-2x"></i><br /><span>sitemaps</span>
+                                    </a>
+                                    <div>
+                                        <p>퍼블리셔를 위한 즐겨찾기<br />(by google spreadsheet)</p>
+                                        <p>RWD , Reactjs + bootstrap</p>
+                                    </div>
+                                </section>
                             </div>
-                        </section>
-                        <section class="msites col-xs-12 col-sm-6 col-md-4">
-                            <a href="http://dstyle0210.github.io/imageMap/" class="btn btn-default imagemap">
-                                <i class="fa fa-map fa-2x"></i><br /><span><i>i</i>mage<i>M</i>ap</span>
-                            </a>
-                            <div>
-                                <p>이미지맵 생성기</p>
-                                <p>PC , bootstrap</p>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <section class="mysites imagemap">
+                                    <a href="http://dstyle0210.github.io/imageMap/" class="btn btn-fixed btn-imagemap">
+                                        <i class="fa fa-link fa-2x"></i><br /><span><i>i</i>mage<i>M</i>ap</span>
+                                    </a>
+                                    <div>
+                                        <p>이미지맵 생성기</p>
+                                        <p>PC , bootstrap</p>
+                                    </div>
+                                </section>
                             </div>
-                        </section>
-                    </div>
-                </article>
-            </section>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <!-- // 관리중인 사이트 -->
 
         </section>
@@ -190,112 +215,116 @@
         <section class="exSec row" id="exSec">
 
             <!-- 경력사항 -->
-            <section class="experienceSec col-xs-12" id="experienceSec">
-                <h2 class="secH2"><strong>Work Experience</strong> <span>경력정보</span></h2>
-                <article class="experienceWrap" id="experienceWrap">
-                    <div id="jsxExperience">
-                        <ul>
-                            <li>
-                                <section class="workfor">
-                                    <h3>FreeLancer</h3>
-                                    <p>Korea republic, 계약직</p>
-                                    <span class="label label-danger">2015.02 ~ 현재</span>
-                                </section>
-                            </li>
-                            <li>
-                                <section class="workfor">
-                                    <h3>SENIOR PROJECT MANAGER</h3>
-                                    <p>BlueGrid , 정규직(수석)</p>
-                                    <span class="label label-default">2012.04 ~ 2015.01</span>
-                                </section>
-                            </li>
-                            <li>
-                                <section class="workfor">
-                                    <h3>Web Publisher , UI Developer</h3>
-                                    <p>Reflexion , 정규직(과장)</p>
-                                    <span class="label label-default">2007.06 ~ 2012.02</span>
-                                </section>
-                            </li>
-                            <li>
-                                <section class="workfor">
-                                    <h3>Web Publisher</h3>
-                                    <p>Mouse Dot Com , 정규직(대리)</p>
-                                    <span class="label label-default">2006 ~ 2007.05</span>
-                                </section>
-                            </li>
-                            <li>
-                                <section class="workfor">
-                                    <h3>Web DESIGNER , Coder</h3>
-                                    <p>unKnown Company, 정규직(사원)</p>
-                                    <span class="label label-default">2004 ~ 2006</span>
-                                </section>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </section>
+            <div class="col-xs-12">
+                <section class="experienceSec" id="experienceSec">
+                    <h2 class="secH2"><strong>Work Experience</strong> <span>경력정보</span></h2>
+                    <article class="experienceWrap" id="experienceWrap">
+                        <div id="jsxExperience">
+                            <ul>
+                                <li>
+                                    <section class="workfor">
+                                        <div class="labelCover"><span class="label label-danger">2015.02 ~ 현재</span></div>
+                                        <h3>FreeLancer</h3>
+                                        <p>Korea republic, 계약직</p>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="workfor">
+                                        <div class="labelCover"><span class="label label-default">2012.04 ~ 2015.01</span></div>
+                                        <h3>SENIOR PROJECT MANAGER</h3>
+                                        <p>BlueGrid , 정규직(수석)</p>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="workfor">
+                                        <div class="labelCover"><span class="label label-default">2007.06 ~ 2012.02</span></div>
+                                        <h3>Web Publisher , UI Developer</h3>
+                                        <p>Reflexion , 정규직(과장)</p>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="workfor">
+                                        <div class="labelCover"><span class="label label-default">2006 ~ 2007.05</span></div>
+                                        <h3>Coder , Web Publisher</h3>
+                                        <p>Mouse Dot Com , 정규직(대리)</p>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="workfor">
+                                        <div class="labelCover"><span class="label label-default">2004 ~ 2006</span></div>
+                                        <h3>Web DESIGNER , Coder</h3>
+                                        <p>unKnown Company, 정규직(사원)</p>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <!-- // 경력사항 -->
 
 
             <!-- 기술능력 -->
-            <section class="skillsSec col-xs-12" id="skillsSec">
-                <h2 class="secH2"><strong>Technical Skills</strong> <span>기술능력</span></h2>
-                <article class="skillsWrap" id="skillsWrap">
-                    <div id="jsxSkills">
-                        <section class="positionSkills row" id="positionSkills0">
-                            <h3 class="col-sm-3">Web Publisher</h3>
-                            <div class="col-sm-9">
-                                <section class="skill col-xs-12 col-sm-4">
-                                    <div class="chart" data-percent="95"><span>95%</span></div>
-                                    <h4>HTML,CSS (LESS , SASS)</h4>
-                                </section>
-                                <section class="skill col-xs-6 col-sm-4">
-                                    <div class="chart" data-percent="80"><span>80%</span></div>
-                                    <h4>Javascript</h4>
-                                </section>
-                                <section class="skill col-xs-6 col-sm-4">
-                                    <div class="chart" data-percent="90"><span>90%</span></div>
-                                    <h4>jQuery</h4>
-                                </section>
-                            </div>
-                        </section>
-                        <section class="positionSkills row" id="positionSkills1">
-                            <h3 class="col-sm-3">Front-End Developer</h3>
-                            <div class="col-sm-9">
-                                <section class="skill col-xs-12 col-sm-4">
-                                    <div class="chart" data-percent="70"><span>70%</span></div>
-                                    <h4>Bootstrap</h4>
-                                </section>
-                                <section class="skill col-xs-6 col-sm-4">
-                                    <div class="chart" data-percent="40"><span>40%</span></div>
-                                    <h4>React</h4>
-                                </section>
-                                <section class="skill col-xs-6 col-sm-4">
-                                    <div class="chart" data-percent="40"><span>40%</span></div>
-                                    <h4>Angular</h4>
-                                </section>
-                            </div>
-                        </section>
-                        <section class="positionSkills row" id="positionSkills2">
-                            <h3 class="col-sm-3">Project Leader or Ace</h3>
-                            <div class="col-sm-9">
-                                <section class="skill col-xs-12 col-sm-4">
-                                    <div class="chart" data-percent="90"><span>90%</span></div>
-                                    <h4>Web Accessibility<br /><span>(웹접근성)</span></h4>
-                                </section>
-                                <section class="skill col-xs-6 col-sm-4">
-                                    <div class="chart" data-percent="70"><span>70%</span></div>
-                                    <h4>Task Runner(Grunt,Gulp)</h4>
-                                </section>
-                                <section class="skill col-xs-6 col-sm-4">
-                                    <div class="chart" data-percent="50"><span>50%</span></div>
-                                    <h4>Back-end Development</h4>
-                                </section>
-                            </div>
-                        </section>
-                    </div>
-                </article>
-            </section>
+            <div class="col-xs-12">
+                <section class="skillsSec" id="skillsSec">
+                    <h2 class="secH2"><strong>Technical Skills</strong> <span>기술능력</span></h2>
+                    <article class="skillsWrap" id="skillsWrap">
+                        <div id="jsxSkills">
+                            <section class="positionSkills row" id="positionSkills0">
+                                <h3 class="col-sm-3">Web Publisher</h3>
+                                <div class="col-sm-9">
+                                    <section class="skill">
+                                        <div class="chart" data-percent="95"><span>95%</span></div>
+                                        <h4>HTML,CSS<br />(LESS , SASS)</h4>
+                                    </section>
+                                    <section class="skill">
+                                        <div class="chart" data-percent="80"><span>80%</span></div>
+                                        <h4>Javascript</h4>
+                                    </section>
+                                    <section class="skill">
+                                        <div class="chart" data-percent="90"><span>90%</span></div>
+                                        <h4>jQuery</h4>
+                                    </section>
+                                </div>
+                            </section>
+                            <section class="positionSkills row" id="positionSkills1">
+                                <h3 class="col-sm-3">Front-End Developer</h3>
+                                <div class="col-sm-9">
+                                    <section class="skill">
+                                        <div class="chart" data-percent="70"><span>70%</span></div>
+                                        <h4>Bootstrap</h4>
+                                    </section>
+                                    <section class="skill">
+                                        <div class="chart" data-percent="40"><span>40%</span></div>
+                                        <h4>React</h4>
+                                    </section>
+                                    <section class="skill">
+                                        <div class="chart" data-percent="40"><span>40%</span></div>
+                                        <h4>Angular</h4>
+                                    </section>
+                                </div>
+                            </section>
+                            <section class="positionSkills row" id="positionSkills2">
+                                <h3 class="col-sm-3">Project Leader or Ace</h3>
+                                <div class="col-sm-9">
+                                    <section class="skill">
+                                        <div class="chart" data-percent="90"><span>90%</span></div>
+                                        <h4>Web Accessibility<br /><span>(웹접근성)</span></h4>
+                                    </section>
+                                    <section class="skill">
+                                        <div class="chart" data-percent="70"><span>70%</span></div>
+                                        <h4>Task Runner<br />(Grunt,Gulp)</h4>
+                                    </section>
+                                    <section class="skill">
+                                        <div class="chart" data-percent="50"><span>50%</span></div>
+                                        <h4>Back-end<br />Development</h4>
+                                    </section>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <!-- // 기술능력 -->
         </section>
         <!-- // 경력,스킬 정보 -->
@@ -304,59 +333,148 @@
         <section class="poSec row" id="poSec">
 
             <!-- 포트폴리오 -->
-            <section class="portfolioSec col-xs-12" id="portfolioSec">
-                <h2 class="secH2"><strong>portfolio</strong> <span>포트폴리오</span></h2>
-                <article class="portfolioWrap" id="portfolioWrap">
-                    <div id="jsxPortfolio">
-                        <ul class="portfolioList row">
-                            <li class="col-sm-6 col-md-4">
-                                <section class="site">
-                                    <dl>
-                                        <dt>공영홈쇼핑(아임쇼핑) <span class="label label-danger">50%</span> <span class="label label-success">Full-Time</span></dt>
-                                        <dd>PL(web) , web publisher , UI Developer</dd>
-                                    </dl>
-                                </section>
-                            </li>
-                            <li class="col-sm-6 col-md-4">
-                                <section class="site">
-                                    <dl>
-                                        <dt>LG G4 Global - UI 고도화 <span class="label label-default">100%</span> <span class="label label-warning">Part-Time</span></dt>
-                                        <dd>UI Developer</dd>
-                                    </dl>
-                                </section>
-                            </li>
-                            <li class="col-sm-6 col-md-4">
-                                <section class="site">
-                                    <dl>
-                                        <dt>알리안츠생명 SFA <span class="label label-default">60%</span> <span class="label label-success">Full-Time</span></dt>
-                                        <dd>PL , web publisher</dd>
-                                    </dl>
-                                </section>
-                            </li>
-                            <li class="col-sm-6 col-md-4">
-                                <section class="site">
-                                    <dl>
-                                        <dt>스마트디바이스 Tistory <span class="label label-default">100%</span> <span class="label label-warning">Part-Time</span></dt>
-                                        <dd>PL , web publisher</dd>
-                                    </dl>
-                                </section>
-                            </li>
-                            <li class="col-sm-6 col-md-4">
-                                <section class="site">
-                                    <dl>
-                                        <dt>왕산마리나 영문화 베리에이션 <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span></dt>
-                                        <dd>PL , web publisher</dd>
-                                    </dl>
-                                </section>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </section>
+            <div class="col-xs-12">
+                <section class="portfolioSec" id="portfolioSec">
+                    <h2 class="secH2"><strong>portfolio</strong> <span>포트폴리오</span></h2>
+                    <article class="portfolioWrap" id="portfolioWrap">
+                        <div id="jsxPortfolio">
+                            <ul class="portfolioList row">
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq0">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-danger">50%</span> <span class="label label-success">Full-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq1">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq2">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq3">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-danger">50%</span> <span class="label label-success">Full-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq4">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq5">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq6">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-danger">50%</span> <span class="label label-success">Full-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq7">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="col-sm-6 col-md-4">
+                                    <section class="site eq8">
+                                        <dl>
+                                            <dt><strong>공영홈쇼핑(아임쇼핑)</strong> <a href="#" class="btn btn-xs btn-link"><i class="fa fa-external-link"></i></a></dt>
+                                            <dd class="position">PL(web) , web publisher , UI Developer</dd>
+                                        </dl>
+                                        <div class="labelDiv">
+                                            <span class="label label-default"><i class="fa fa-mobile"></i></span>
+                                            <span class="label label-default"><i class="fa fa-tablet"></i></span>
+                                            <span class="label label-default"><i class="fa fa-desktop"></i></span>
+                                            <span class="label label-default">50%</span> <span class="label label-warning">Part-Time</span>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                            <div class="loadProtfolioDiv">
+                                <a href="portfolio.html" class="btn btn-default"><i class="fa fa-external-link"></i> <span>더보기</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <!-- // 포트폴리오 -->
         </section>
-
-
 
         <!-- 연락처 -->
         <section class="contactSec" id="contactSec">
@@ -367,21 +485,21 @@
                     <li>이력서 요청시에는 PDF파일로 보내드리며, 간략본으로 제공합니다. (최근 2년 이내 프로젝트만 포함 및 개인정보 제외)</li>
                 </ul>
                 <div id="jsxContact">
-                    <form action="">
-                        <div class="form-group">
+                    <form action="" class="row">
+                        <div class="form-group col-xs-12 col-sm-4">
                             <input type="text" class="form-control" placeholder="성함" />
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-xs-12 col-sm-8">
                             <input type="text" class="form-control" placeholder="이메일 주소" />
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-xs-12">
                             <input type="text" class="form-control" placeholder="제목" />
                         </div>
-                        <div class="form-group">
-                            <textarea type="text" class="form-control" placeholder="내용"></textarea>
+                        <div class="form-group col-xs-12">
+                            <textarea type="text" class="form-control" rows="10" placeholder="내용"></textarea>
                         </div>
-                        <div class="form-group btnSec">
-                            <button type="button" class="btn btn-primary">보내기</button>
+                        <div class="form-group btnSec col-xs-12">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-paper-plane"></i> 보내기</button>
                         </div>
                     </form>
                 </div>
@@ -445,193 +563,6 @@ $(function(){
         });
     });
 });
-
-
-
 </script>
-
-
-
-<!--
-<div>
-    <div style="background:#ab2424;width:60%;height:10px;"></div>
-
-
-    <section>
-        <img src="" alt="내사진">
-        <h1>Dstyle</h1>
-        <p>Web Publisher , Front-End Developer</p>
-    </section>
-
-    <section>
-        <ul>
-            <li><a href="#">RESUME</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </section>
-
-    <h2>RESUME</h2>
-    PERSONAL Information <span>기본정보</span>
-    이름 : 원용봉
-    생년월일 : 1983.10.11 (만 33세)
-    근무경력 : 2004.02 ~ 현재(만 11년 8개월)
-    사는곳 : 서울 은평구
-    이메일 : dstyle0210@gmail.com
-
-
-    PROFESIONAL PROFILE <span>자기소개</span>
-    안녕하세요. 원용봉입니다.<br />
-    웹퍼블리셔(Web Publisher) 나 프론트앤드 개발자(Front-End Developer)로 활동하고 있습니다.<br />
-
-
-    MY SERVICE <span>업무부분</span>
-    * Web Publisher
-    * UI Developer
-    * Front-End Developer
-    * Project Leader or Ace
-
-
-
-
-    WORK EXPERIENCE <span>근무사항</span>
-    FREELANCER 2015.02 ~ PRESENT
-
-    * 알리안츠생명 SFA  2015.01 ~ 2015.03
-    - 파견
-    - SI , PL , WebPublisher
-    - Tablet 전용 SFA
-
-    * Smart Devices & Mobile Trends Blog 2015.04
-    - 자택
-    - Tistory Skin , Skin Publish
-    - 티스토리 전용 스킨
-    - http://www.smartdevice.kr/
-
-    * LG G4 Global 2015.06
-    - 파견
-    - Edit HTML , UI Develop
-    - http://www.lg.com/uk/mobile-phones/g4/main.jsp
-
-    * 공영홈쇼핑(아임쇼핑) 2015.04 ~
-
-    - 파견
-    - SI , PL , Front-End Developer
-    - http://www.immall.co.kr/main.do
-
-
-    -&#45;&#45;
-
-    SENIOR PROJECT MANAGER (UID) 2012.04 ~ 2015.01
-    [블루그리드] UID  , 정규직
-
-    총괄팀장 수행(역량부족)
-    웹접근성 수행
-    -&#45;&#45;
-    Web Publisher , UI Developer 2007.06 ~ 2012.02
-    [리플렉션] 개발팀 , 정규직
-
-    개발 및 기획 협업
-    팀장역활 수행
-    단독 프로젝트 수행
-    다국어 사이트 제작
-    웹표준, 웹컨덴츠기본가이드라인 적용
-    -&#45;&#45;
-    Web Publisher 2006 ~ 2007.05
-    [마우스닷컴], 개발팀 , 정규직
-    개발 및 기획 협업
-    단독 프로젝트 수행
-    웹표준, 웹컨덴츠기본가이드라인 적용
-    -&#45;&#45;
-    Coder 2004~2006
-    소규모 에이전시들 근무 , 정규직
-    단독 프로젝트 수행
-
-
-    REFERENCES 주요경력
-
-
-
-    TECHNICAL SKILLS <span>기술능력</span>
-
-
-
-
-
-
-
-
-    Web Publish (HTML to PSD)
-    90%
-    -&#45;&#45;
-    HTML,CSS (LESS , SASS) / 고급,11년 95%
-    HTML5및 CSS3사용에 대하여 관심이 많고, 허용범위내에서는 사용하려고 하는편.
-
-    Javascript / 중급 , 8년 60%
-
-    Web Accibilty / 중급 (85%)
-    웹접근성 인증마크 다수 획득, 웹접근성 관련 세미나 진행.
-
-
-
-
-
-    UI Developer
-    70%
-    -&#45;&#45;
-
-
-    ㅡㅡㅡ
-
-    jQuery / 중급, 7년 80%
-    메소드 및 체이닝 연결에 대한 알고리즘은 이해하고 있음, 독립 플러그인 개발가능
-
-    Bootstrap / 중급 , 2년 , 60%
-    CSS 및 컴포넌트 MVC 라이브러리에 연결가능.
-
-    Task Runner / 기본 , 70%
-    Grunt , Gulp 사용가능
-
-
-
-
-    ㅡㅡㅡ
-
-    Front-End Developer
-    50%
-
-    React / 초급 , 1년 , 40%
-    제공된 Json기반 View Model 작성가능, 동작 Event 구현가능
-
-    Angular / 초급 , 1년 , 40%
-    제공된 Json기반 ng-Repeat 및 ng-* 연결 가능.
-
-    Back-end Development / 초급 , 8년 , 60%
-    PHP , JSP , ASP 등 서버사이드 언어기반 퍼블리싱 가능(개발 불가)
-
-
-
-
-
-
-    PORTFOLIO 포트폴리오
-
-    공영홈쇼핑(아임쇼핑) 2015.04~현재
-    WebPublisher , UI Developer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>-->
 </body>
 </html>

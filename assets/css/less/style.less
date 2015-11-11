@@ -1,26 +1,37 @@
 @import "font.less";
+@import "elements.less";
+
 @brand-primary:darken(#428bca, 6.5%);
 @brand-success:#5cb85c;
 @brand-info:#5bc0de;
 @brand-warning:#f0ad4e;
 @brand-danger:#d9534f;
 body{background:url('../images/bg.png');.kor();font-size:13px;letter-spacing:0;}
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{overflow:hidden;}
+.row,.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{overflow:hidden;}
 
+// val.less
+@font-color-lightgray:#999;
+@font-color-gray:#666;
+@font-color-darkgray:#333;
+
+// border preset.
+@border-color-lightgray:#ccc;
+@border-color-gray:#999;
+@border-color-darkgray:#666;
+.border(@color:@border-color-gray;@line:solid;@px:1px){
+  border:@px @line @color;
+}
 
 // bootstrap custom or add
 h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
+dl{margin-top:20px;margin-bottom:0;}
+dl:first-child{margin-top:0;}
+.progress{margin-bottom:0;background-color:#fff;}
 .btn span{.btnSpan();}
-.btn.papers span{font-family:'Poiret One',cursive;font-weight:700;}
-.btn.sitemaps span{font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;}
-.btn.imagemap span{font-family:'Pacifico', cursive;}
 .label{font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;}
 
-
-.dstyleWrap{position:relative;box-sizing:border-box;padding:5px;margin:20px auto;background:#fff;max-width:1000px;border-radius:7px;
-   .stitch{box-sizing:border-box;width:100%;padding:0 20px;border:1px dashed #666;border-radius:5px;}
-   .topLine{margin-top:-5px;width:100%;height:10px;background:@brand-danger;}
-}
+// 공통 : 내 사이트 버튼 template
+@import "btn-dstyle.css";
 
 // 공통
 .lazyCase{display:inline-block;width:100%;height:100%;overflow:hidden;background:#f5f5f5 url('../images/ajax-loader.gif') no-repeat center center;}
@@ -31,127 +42,185 @@ h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 
 // 공통 : 타이틀
 .secH2{padding-bottom:20px;width:100%;text-transform: uppercase;
-  >strong{display:inline-block;padding-right:20px;background: #ffffff;.eng();font-size:24px;}
+  >strong{display:inline-block;padding-right:20px;.eng();font-size:24px;}
   >span{display:inline-block;padding-top:8px;float:right;.kor();font-size:12px;color:#666;}
 }
 
+// 전체 외부레이아웃
+.dstyleWrap{position:relative;box-sizing:border-box;padding:5px;margin:30px auto 0;width:96%;max-width:1000px;.rounded(7px);
+  background-color: #ffffff;
+  background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  .stitch{box-sizing:border-box;width:100%;padding:0 4%;.border(@line:dashed);.rounded(5px);overflow:hidden;}
+  .topLine{position:absolute;top:0;left:4%;width:92%;height:10px;background:@brand-danger;}
+  // 메뉴
+  .menu{position:absolute;top:20px;right:6%;z-index:100;}
+  @media (min-width: 768px) {
+    .menu{right:46px;}
+  }
+}
+// 풋터
+footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
 
 // 프로필
-.profileSec{position:relative;padding:50px 0 30px;width:100%;overflow:hidden;
-  .photo{margin:0 auto;box-sizing:border-box;padding:10px;border:1px solid #ccc;width:150px;height:150px;}
+.profileSec{padding-top:50px;
+  @borderColor:@border-color-lightgray;
+  @fontColor:@font-color-gray;
+  .photo{margin:0 auto;box-sizing:border-box;padding:10px;.border(@borderColor);width:150px;height:150px;.rounded(3px);background: #FFFFFF;}
   .info{text-align:center;
     *{margin:0;padding:0;}
-    h1{padding-top:20px;.eng(400);font-size:44px;}
-    p.job{padding-top:15px;.engsub();font-size:18px;text-transform: uppercase;color:#666;}
-    p.desc{padding-top:5px;.kor();font-size:16px;color:#666;}
+    h1{padding-top:20px;.eng(400);font-size:36px;}
+    p.job{padding-top:15px;.engsub();font-size:14px;text-transform: uppercase;color:@fontColor;}
+    p.desc{padding-top:5px;.kor();font-size:13px;color:@fontColor;}
   }
   .goto{text-align:center;padding-top:10px;}
+
+  @media (min-width: 768px) {
+    .photo{margin:0;width:120px;height:120px;}
+    .info{text-align:left;
+      h1{padding-top:6px;font-size:44px;}
+      p.job{font-size:18px;}
+      p.desc{font-size:16px;}
+    }
+    .goto{text-align:left;}
+  }
+  @media (min-width: 992px) {
+    .goto{text-align:right;padding-top:85px;}
+  }
+
 }
 
 // 인적정보
-.cvSec{position:relative;padding:30px 0;overflow:hidden;
-  >section{padding-top:30px;&:first-child{padding-top:0;}}
-  .informationWrap{
-    dl{width:100%;overflow:hidden;border-bottom:1px solid #dadada;}
+.cvSec{
+  @borderColor:@border-color-lightgray;
+  // 인적정보 > 기본정보
+  .informationSec{padding-top:50px;
+    dl{margin:20px 0 0;width:100%;overflow:hidden;border-bottom:1px solid @borderColor;}
+    dl:first-child{margin-top:0;}
     dt,dd{padding:0 0 5px 5px;float:left;}
   }
-  .positionWrap{
-    dt{.engsub(400);font-size:18px;}
+  // 인적정보 > 업무영역
+  .positionSec{padding-top:50px;
+    dt{padding-bottom:5px;.engsub(400);font-size:18px;}
   }
-  @media (min-width: 768px) {
-    .positionSec{padding-top:0;}
-  }
-}
-// 경력,스킬
-.exSec{position:relative;padding:30px 0;overflow:hidden;}
-
-  // 관리중인 사이트
-.msites{overflow: hidden;position:relative;
-  >a{position:absolute;top:0;left:0;width:90px;}
-  >a.papers{background:#333;color:@brand-warning;
-    >span{color:#fff;}
-  }
-  >a.sitemaps{color: @brand-danger;
-    >span{color:#333;}
-  }
-  >a.imagemap{color: @brand-info;
-    >span{color:#333;
-      >i{color: @brand-info;}
-    }
-  }
-  >div{padding-left:100px;min-height:70px;}
-}
-
-// 일한곳
-.experienceSec{position:relative;padding-top:30px;padding-bottom:30px;overflow:hidden;
-  >article{
-    ul,li{margin:0;padding:0;}
-    li{
-      padding:20px 0;border-top:1px solid #ddd;
-      &:first-child{padding-top:0;border-top:0;}
-    }
-  }
-
-  // 목록정보
-  .workfor{position:relative;padding:0 10px;box-sizing:border-box;width:100%;overflow:hidden;
-    h3{.engsub();font-size:20px;text-transform: uppercase;color:#333;}
-    p{padding:10px 0 0 0;margin:0;color:#666;}
-    span{position:absolute;bottom:0;right:0;}
-    .label{padding:6px 10px 4px; font-size:12px;}
-  }
-}
-
-
-// 기술수준
-.skillsSec{position:relative;padding-top:30px;padding-bottom:30px;overflow:hidden;
-  .positionSkills{overflow:hidden;
-    h3{padding-bottom:15px;.eng(300);font-size:18px;
-      @media (min-width: 768px) {  &{padding-left:35px;padding-top:20px;.eng(300);font-size:24px;color:#666;}  }
-    }
-  }
-
-  .skill{height:140px;
-    .chart{position:relative;margin:0 auto;width:80px;
-      >span{position:absolute;top:32px;left:27px;}
-    }
-    h4{.engsub();font-size:16px;text-align:center;
-      span{.kor();font-size:13px;}
+  // 인적정보 > 관리중인 사이트
+  .maintainedSec{padding-top:50px;
+    // 관리중인 사이트
+    .mysites{position:relative;margin-top:20px;width:100%;overflow: hidden;
+      >a{position:absolute;top:0;left:0;width:90px;}
+      >div{padding-left:100px;height:70px;}
+      &.papers{margin-top:0;}
+      @media (min-width: 768px) {
+        &.sitemaps{margin-top:0;}
+      }
+      @media (min-width: 992px) {
+        &.imagemap{margin-top:0;}
+      }
     }
   }
 }
 
+// 경력정보
+.exSec{
+  // 일한곳
+  .experienceSec{padding-top:50px;
+    >article{
+      ul,li{margin:0;padding:0;}
+      li{padding:10px 0;border-top:1px solid #ddd;
+        &:first-child{padding-top:0;border-top:0;}
+        &:last-child{padding-bottom:0;}
+      }
+    }
 
-.portfolioSec{position:relative;padding-top:30px;padding-bottom:30px;overflow:hidden;
-  @media (min-width: 768px) {
-    &{padding-top:0;}
+    // 목록정보
+    .workfor{padding-left:20px;box-sizing:border-box;width:100%;overflow:hidden;
+      .labelCover{padding-bottom:10px;}
+      .label{display:inline-block;padding:6px 10px 4px; font-size:14px;.kor(400);letter-spacing:0;}
+      p{float:left;margin:0;padding:10px 0 0 0;color:#666;}
+      h3{.engsub();font-size:22px;text-transform: uppercase;color:#333;}
+      @media (min-width: 480px) {
+        .labelCover{float:right;}
+      }
+    }
   }
+
+  // 기술수준
+  .skillsSec{padding-top:50px;
+    .positionSkills{overflow:hidden;
+      h3{padding-bottom:15px;.eng(300);font-size:18px;
+        @media (min-width: 768px) {  &{padding-left:35px;padding-top:20px;.eng(300);font-size:24px;color:#666;}  }
+      }
+    }
+    .skill{float:left;width:33%;height:140px;
+      .chart{position:relative;margin:0 auto;width:80px;
+        >span{position:absolute;top:32px;left:27px;}
+      }
+      h4{.engsub();font-size:14px;text-align:center;
+        span{.kor();font-size:13px;}
+        @media (min-width: 768px) {
+          &{font-size:16px;}
+        }
+      }
+    }
+  }
+}
+
+// 포트폴리오
+.portfolioSec{padding-top:50px;
   .portfolioList{margin:0;padding:0;
     >li{margin:0;padding:0;list-style:none;}
   }
+  .site{margin-top:30px;padding:0 15px;border-left:2px solid #666;
+    dl{margin-top:5px;position:relative;}
+    dd.link{position:absolute;top:0;right:0;}
+    dt{padding-bottom:5px;
+      strong{font-size:16px;letter-spacing:0;.kor(700);color:#333;}
+    }
+    .position{padding-bottom:5px;color:#666;.engsub();font-size:14px;}
+    &.eq0{margin-top:0;}
+    &.eq8{margin-bottom:0;}
+    @media (min-width: 768px) {
+      &.eq1{margin-top:0;}
+    }
+    @media (min-width: 992px) {
+      &.eq2{margin-top:0;}
+      &.eq6,&.eq7{margin-bottom:0;}
+    }
+  }
+  .loadProtfolioDiv{padding-top:20px;text-align:right;}
+}
+// 포트폴리오 리스트
+.portfolioListSec{padding-top:50px;
+  .portfolioList{padding:0 0 20px;
+    >li{list-style:none;}
+    >li:first-child .site{border-top:0;}
+    @media (min-width: 992px) {
+      >li:nth-child(2) .site{border-top:0;}
+      >li{overflow:hidden;
+        dl{float:left;width:60%;}
+        .date,.labelDiv{float:right;width:40%;text-align:right;}
+        .labelDiv{padding-top:5px;}
+      }
+    }
+  }
+  .site{padding:20px 0 10px;width:100%;overflow:hidden;border-top:1px solid #ddd;
+    dl{overflow:hidden;}
+    dt{display:inline-block;
+      strong{font-size:16px;letter-spacing:0;.kor(700);color:#333;}
+    }
+    dd,.date{color:#666;.engsub();font-size:14px;}
+    @media (min-width: 768px) {
+      dl{float:left;width:50%;}
+      .date{float:left;padding-top:20px;width:20%;font-size:16px;}
+      .labelDiv{float:right;padding-top:23px;}
+    }
+  }
 }
 
-.contactSec{position:relative;padding:30px 0;width:100%;overflow:hidden;
+// 의뢰하기
+.contactSec{padding-top:50px;
   .descList{padding-left:15px;}
   .btnSec{text-align:right;}
 }
-
-
-
-// 풋터
-footer{.engsub();padding-bottom:20px;text-align:center;color:#fff;font-size:14px;}
-
-// 메뉴
-.menu{position:absolute;top:20px;right:20px;z-index:100;}
-
-/*
-.profileSec{position:relative;margin:50px 0;width:100%;overflow:hidden;
-  .photo{float:left;box-sizing:border-box;padding:10px;border:1px solid #ccc;width:150px;height:150px;}
-  .info{float:left;padding-left:20px;
-    *{margin:0;padding:0;}
-    h1{padding-top:36px;.eng(400);font-size:44px;}
-    p.job{padding-top:15px;.engsub();font-size:18px;text-transform: uppercase;color:#666;}
-    p.desc{padding-top:5px;.kor();font-size:16px;color:#666;}
-  }
-  .goto{position:absolute;top:0;right:0;}
-}
-*/
