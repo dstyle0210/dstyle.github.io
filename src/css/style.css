@@ -1,10 +1,109 @@
-@import "btn-dstyle.css";
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+body .btn-dstyle {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+body .btn-dstyle i {
+  color: #666;
+}
+body .btn-dstyle span {
+  font-family: 'Oswald', sans-serif;
+}
+body .btn-dstyle.btn-fixed,
+body .btn-dstyle:hover {
+  border-top: 1px solid #d9534f;
+  border-right: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+  border-left: 1px dashed #333;
+}
+body .btn-dstyle.btn-fixed i,
+body .btn-dstyle:hover i {
+  color: #333;
+}
+body .btn-dstyle.btn-fixed span,
+body .btn-dstyle:hover span {
+  color: #333;
+}
+body .btn-papers {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+body .btn-papers i {
+  color: #666;
+}
+body .btn-papers span {
+  font-family: 'Poiret One', cursive;
+  font-weight: 700;
+}
+body .btn-papers.btn-fixed,
+body .btn-papers:hover {
+  background: #333;
+  border: 1px solid #adadad;
+}
+body .btn-papers.btn-fixed i,
+body .btn-papers:hover i {
+  color: #f0ad4e;
+}
+body .btn-papers.btn-fixed span,
+body .btn-papers:hover span {
+  color: #fff;
+}
+body .btn-sitemaps {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+body .btn-sitemaps i {
+  color: #666;
+}
+body .btn-sitemaps span {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+}
+body .btn-sitemaps.btn-fixed,
+body .btn-sitemaps:hover {
+  border: 1px solid #adadad;
+}
+body .btn-sitemaps.btn-fixed i,
+body .btn-sitemaps:hover i {
+  color: #d9534f;
+}
+body .btn-sitemaps.btn-fixed span,
+body .btn-sitemaps:hover span {
+  color: #333;
+}
+body .btn-imagemap {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+body .btn-imagemap i {
+  color: #666;
+}
+body .btn-imagemap span {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+}
+body .btn-imagemap.btn-fixed,
+body .btn-imagemap:hover {
+  border: 1px solid #adadad;
+}
+body .btn-imagemap.btn-fixed i,
+body .btn-imagemap:hover i {
+  color: #5bc0de;
+}
+body .btn-imagemap.btn-fixed span,
+body .btn-imagemap:hover span {
+  color: #333;
+}
 body {
   background: url('../images/bg.png');
   font-family: 'NanumBarunGothic', sans-serif;
@@ -91,7 +190,7 @@ dl:first-child {
 .label {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.lazyCase {
+.lazyLoad {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -105,7 +204,7 @@ dl:first-child {
   overflow: hidden;
   background: #f5f5f5;
 }
-.lazyCase > img,
+.lazyLoad > img,
 .lazyParent > img {
   display: none;
   width: 100%;
@@ -144,10 +243,10 @@ dl:first-child {
   -moz-border-radius: 7px;
   border-radius: 7px;
   background-color: #ffffff;
-  background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
-  background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
-  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("../images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("../images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("../images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
+  background-image: url("../images/overlay.png"), linear-gradient(60deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8)), url("../images/paper.png");
 }
 .dstyleWrap .stitch {
   box-sizing: border-box;
@@ -172,6 +271,11 @@ dl:first-child {
   top: 20px;
   right: 6%;
   z-index: 100;
+}
+@media print {
+  .dstyleWrap .menu {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .dstyleWrap .menu {
@@ -283,6 +387,11 @@ footer {
 .cvSec .positionSec {
   padding-top: 50px;
 }
+@media print {
+  .cvSec .positionSec {
+    display: none;
+  }
+}
 .cvSec .positionSec dt {
   padding-bottom: 5px;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -291,6 +400,11 @@ footer {
 }
 .cvSec .maintainedSec {
   padding-top: 50px;
+}
+@media print {
+  .cvSec .maintainedSec {
+    display: none;
+  }
 }
 .cvSec .maintainedSec .mysites {
   position: relative;
@@ -323,6 +437,13 @@ footer {
 }
 .exSec .experienceSec {
   padding-top: 50px;
+}
+@media print {
+  .exSec .experienceSec {
+    margin-top: 300px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 }
 .exSec .experienceSec > article ul,
 .exSec .experienceSec > article li {
@@ -430,8 +551,27 @@ footer {
     font-size: 16px;
   }
 }
+@media print {
+  .exSec .skillsSec {
+    padding-top: 50px;
+  }
+  .exSec .skillsSec .col-sm-3 {
+    float: left;
+    width: 20%;
+  }
+  .exSec .skillsSec .col-sm-9 {
+    float: left;
+    width: 80%;
+  }
+}
 .portfolioSec {
   padding-top: 50px;
+}
+@media print {
+  .portfolioSec {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 }
 .portfolioSec .portfolioList {
   margin: 0;
@@ -446,6 +586,11 @@ footer {
   margin-top: 30px;
   padding: 0 15px;
   border-left: 2px solid #666;
+}
+@media print {
+  .portfolioSec .site {
+    margin-top: 10px;
+  }
 }
 .portfolioSec .site dl {
   margin-top: 5px;
@@ -466,6 +611,11 @@ footer {
   font-weight: 700;
   letter-spacing: -1px;
   color: #333;
+}
+@media print {
+  .portfolioSec .site dt strong {
+    font-size: 13px;
+  }
 }
 .portfolioSec .site .position {
   padding-bottom: 5px;
@@ -497,6 +647,11 @@ footer {
 .portfolioSec .loadProtfolioDiv {
   padding-top: 20px;
   text-align: right;
+}
+@media print {
+  .portfolioSec .loadProtfolioDiv {
+    display: none;
+  }
 }
 .portfolioListSec {
   padding-top: 50px;
@@ -576,6 +731,11 @@ footer {
 }
 .contactSec {
   padding-top: 50px;
+}
+@media print {
+  .contactSec {
+    display: none;
+  }
 }
 .contactSec .descList {
   padding-left: 15px;

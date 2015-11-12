@@ -1,28 +1,77 @@
 module.exports = function(grunt) {
-
     grunt.initConfig({
-        watch: {
-            less: {
-                files: ['assets/css/**/*.less'],
-                tasks: ['less']
-            },
-        },
-        less: {
-            src: {
+        pkg: grunt.file.readJSON('package.json'),
+        copy: {
+            html: {
                 files: [{
                     expand: true,
-                    cwd: 'assets/css/less/',
-                    src: ['*.less'],
-                    dest: 'assets/css/',
-                    ext: '.css'
+                    cwd: 'src/',
+                    src: ['*.html'],
+                    dest: './'
                 }]
+            }
+        },
+        htmlmin: {                                     // Task
+            dist: {                                      // Target
+                options: {                                 // Target options
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {                                   // Dictionary of files
+                    'index.html': 'src/index.html',     // 'destination': 'source'
+                    'portfolio.html': 'src/portfolio.html'
+                }
+            }
+        },
+        uglify: {
+            js: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/js',
+                    src: ['**/*.js','!jsx/*.js'],
+                    dest: './js'
+                }]
+            }
+        },
+        csscomb: {
+            options:{
+                config:"zen.json"
             },
+            dynamic_mappings: {
+                expand: true,
+                cwd: 'src/css/',
+                src: ['*.css'],
+                dest: './css/',
+                ext: '.css'
+            }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'css/style.css': ['css/style.css']
+                }
+            }
+        },
+        imagemin: {                          // Task
+            dist: {                         // Another target
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'src/images',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: './images'                  // Destination path prefix
+                }]
+            }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    for (var key in grunt.file.readJSON("package.json").devDependencies) {
+        if (key !== "grunt" && key.indexOf("grunt") === 0) grunt.loadNpmTasks(key);
+    };
 
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['htmlmin:dist','uglify:js','csscomb','cssmin','imagemin:dist']);
 
 };
