@@ -200,14 +200,12 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
       &{margin-top:10px;}
     }
     dl{margin-top:5px;position:relative;}
-    dd.link{position:absolute;top:0;right:0;}
-    dt{padding-bottom:5px;
-      strong{
-        font-size:16px;letter-spacing:0;.kor(700);color:#333;
+    dt{
+      strong{font-size:16px;letter-spacing:0;.kor(700);color:#333;
         @media print {font-size:13px;}
       }
     }
-    .position{padding-bottom:5px;color:#666;.engsub();font-size:14px;}
+    dd{padding-bottom:5px;.kor();font-size:12px;color:#666;}
     &.eq0{margin-top:0;}
     &.eq8{margin-bottom:0;}
     @media (min-width: 768px) {
@@ -229,16 +227,12 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
 }
 // 포트폴리오 리스트
 .portfolioListSec{padding-top:50px;
+  .footnote{margin-top:-15px;width:100%;text-align:right;font-size:11px;color:#666;}
   .portfolioList{padding:0 0 20px;
     >li{list-style:none;}
     >li:first-child .site{border-top:0;}
-    @media (min-width: 992px) {
-      >li:nth-child(2) .site{border-top:0;}
-      >li{overflow:hidden;
-        dl{float:left;width:60%;}
-        .date,.labelDiv{float:right;width:40%;text-align:right;}
-        .labelDiv{padding-top:5px;}
-      }
+    @media (min-width: 992px){
+      >li.eq1 .site{border-top:0;}
     }
   }
   .site{padding:20px 0 10px;width:100%;overflow:hidden;border-top:1px solid #ddd;
@@ -246,11 +240,19 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
     dt{display:inline-block;
       strong{font-size:16px;letter-spacing:0;.kor(700);color:#333;}
     }
-    dd,.date{color:#666;.engsub();font-size:14px;}
+    dd{.kor();font-size:12px;color:#666;}
+    .role,.date{color:#666;.engsub();font-size:14px;}
+    .date{padding-bottom:5px;}
+
     @media (min-width: 768px) {
-      dl{float:left;width:50%;}
-      .date{float:left;padding-top:20px;width:20%;font-size:16px;}
-      .labelDiv{float:right;padding-top:23px;}
+      dl{float:left;width:70%;}
+      .addData{float:right;width:30%;
+        .date{font-size:16px;}
+        >div{text-align:right;}
+      }
+    }
+    @media (min-width: 992px) {
+      dl,.addData{width:50%}
     }
   }
 }
