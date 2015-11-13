@@ -573,6 +573,12 @@ footer {
     padding-bottom: 20px;
   }
 }
+.portfolioSec .portfolioWrap {
+  min-height: 100px;
+}
+.portfolioSec .portfolioWrap.loading {
+  background: url('../images/ajax-loader.gif') no-repeat center center;
+}
 .portfolioSec .portfolioList {
   margin: 0;
   padding: 0;
@@ -584,6 +590,7 @@ footer {
 }
 .portfolioSec .site {
   margin-top: 30px;
+  height: 65px;
   padding: 0 15px;
   border-left: 2px solid #666;
 }
@@ -596,6 +603,9 @@ footer {
   margin-top: 5px;
   position: relative;
 }
+.portfolioSec .site dt * {
+  vertical-align: top;
+}
 .portfolioSec .site dt strong {
   font-size: 16px;
   letter-spacing: 0;
@@ -603,6 +613,11 @@ footer {
   font-weight: 700;
   letter-spacing: -1px;
   color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+  display: inline-block;
 }
 @media print {
   .portfolioSec .site dt strong {
@@ -616,6 +631,9 @@ footer {
   letter-spacing: -1px;
   font-size: 12px;
   color: #666;
+}
+.portfolioSec .site .labelDiv .label {
+  margin-right: 3px;
 }
 .portfolioSec .site.eq0 {
   margin-top: 0;
@@ -742,4 +760,20 @@ footer {
 }
 .contactSec .btnSec {
   text-align: right;
+}
+.contactSec .webaDiv {
+  text-align: right;
+}
+.contactSec .webaDiv * {
+  vertical-align: middle;
+  margin: 0;
+}
+.contactSec .webaDiv label {
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #666;
+}
+.contactSec #formProgress {
+  display: none;
 }

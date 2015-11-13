@@ -16,6 +16,9 @@ require.config({
     }
 });
 
+// 메뉴영역
+requirejs(["jquery","bootstrap"],function(){});
+
 // 프로필 영역.
 requirejs(["jquery","app/getProfile/getAgeApp","app/getProfile/getExperienceApp"],function($,getAge,getExper){
     $(function(){
@@ -39,12 +42,13 @@ requirejs(["jquery","app/piechart/pieApp"],function($,makepie){
 });
 
 // 포트폴리오 리스트
-requirejs(["jquery","underscore","react","app/portfolio/formInputBox"],function($,_,React){
+requirejs(["jquery","underscore","react","app/portfolio/PortfolioIndexBox"],function($,_,React){
     $.ajax({
         url: "https://spreadsheets.google.com/feeds/list/1GDTX8ohqU_0_HNJtUv5xLN7BNFfRy7dnQcZmWLDaqjI/1/public/values?alt=json",
         dataType: 'json',
         cache: false,
         success: function(response) {
+            $("#portfolioWrap").removeClass("loading");
             var cells = _.map(response.feed.entry,function(data){
                 var o = {};
                 _.each(data,function(item,key){
@@ -55,11 +59,9 @@ requirejs(["jquery","underscore","react","app/portfolio/formInputBox"],function(
                 });
                 return o;
             });
-            cells = _.rest(cells);
-            console.log(cells);
-
+            cells = _.filter(cells,function(site){return site.open!="" });
             React.render(
-                React.createElement(PortfolioIndexBox),
+                React.createElement(PortfolioIndexBox,{data:cells}),
                 document.getElementById("jsxPortfolio")
             );
         },
@@ -67,6 +69,16 @@ requirejs(["jquery","underscore","react","app/portfolio/formInputBox"],function(
 
         }
     });
+});
+
+// 포트폴리오 입력
+requirejs(["jquery","underscore","react","app/portfolio/PortfolioFormBox"],function($,_,React){
+    $(function(){
+        React.render(
+            React.createElement(PortfolioFormBox),
+            document.getElementById("jsxContact")
+        );
+    })
 });
 
 
