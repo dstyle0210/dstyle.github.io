@@ -667,6 +667,12 @@ footer {
 .portfolioListSec {
   padding-top: 50px;
 }
+.portfolioListSec .portfolioWrap {
+  min-height: 100px;
+}
+.portfolioListSec .portfolioWrap.loading {
+  background: url('../images/ajax-loader.gif') no-repeat center center;
+}
 .portfolioListSec .footnote {
   margin-top: -15px;
   width: 100%;
@@ -684,7 +690,7 @@ footer {
   border-top: 0;
 }
 @media (min-width: 992px) {
-  .portfolioListSec .portfolioList > li.eq1 .site {
+  .portfolioListSec .portfolioList > li .site.eq1 {
     border-top: 0;
   }
 }
@@ -714,6 +720,9 @@ footer {
   letter-spacing: -1px;
   font-size: 12px;
   color: #666;
+}
+.portfolioListSec .site .labelDiv .label {
+  margin-right: 3px;
 }
 .portfolioListSec .site .role,
 .portfolioListSec .site .date {
