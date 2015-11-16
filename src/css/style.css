@@ -232,6 +232,14 @@ dl:first-child {
   font-size: 12px;
   color: #666;
 }
+.t_secH2 {
+  padding-bottom: 20px;
+  width: 100%;
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 24px;
+}
 .dstyleWrap {
   position: relative;
   box-sizing: border-box;
