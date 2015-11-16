@@ -52,7 +52,8 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'css/style.css': ['css/style.css']
+                    'css/style.css': ['css/style.css'],
+                    'css/tistory.css': ['css/tistory.css'],
                 }
             }
         },

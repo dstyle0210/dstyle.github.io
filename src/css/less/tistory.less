@@ -48,6 +48,7 @@ dl:first-child{margin-top:0;}
 .t_secH2{padding-bottom:20px;width:100%;.kor();font-size:24px;
   strong{color:@brand-warning;}
 }
+aside .secH2{.eng(400);font-size:18px;}
 
 // 전체 외부레이아웃
 .dstyleWrap{position:relative;box-sizing:border-box;padding:5px;margin:30px auto 0;width:96%;max-width:1000px;.rounded(7px);
@@ -141,4 +142,20 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
 
   .tagTrail{width:100%;padding-top:5px;border-top:1px solid @borderColor;}
 
+}
+
+
+// 사이드영역
+aside{
+  .asideSec{padding-bottom:20px;}
+
+  // 카테고리
+  .categorySec{
+    *{padding:0;margin:0;list-style:none;}
+    a{.engsub();font-size:14px;}
+    nav>ul>li>a{display:inline-block;padding-bottom:5px;color:@font-color-darkgray;font-weight:700;font-size:16px;}
+    nav>ul>li>ul>li{padding:10px 0;border-top:1px dashed #333;}
+    nav>ul>li>ul>li>a{color:@font-color-darkgray;font-weight:700;padding-left:5px;}
+    nav>ul>li>ul>li>ul>li>a{display:inline-block;padding-left:17px;color:@font-color-gray;font-weight:400;}
+  }
 }
