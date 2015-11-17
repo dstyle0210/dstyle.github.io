@@ -31,11 +31,11 @@
     <meta name="robots" content="index,follow" />
 
     <!-- CSS -->
-    <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css'>
+    <!--<link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css'>
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|PT+Sans+Narrow|Lato|Poiret+One'>
     <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" type='text/css' href="css/style.css" />
+    <link rel="stylesheet" type='text/css' href="css/style.css" />-->
 </head>
 <body>
 <section class="dstyleWrap" id="dstyleWrap">
@@ -380,5 +380,28 @@
 
 
 <script type="text/javascript" data-main="js/dstyle" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
+<script>
+    var cssRef = ["https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css",
+            "https://fonts.googleapis.com/css?family=Oswald:400,300,700|PT+Sans+Narrow|Lato|Poiret+One",
+            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css",
+            "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css",
+            "css/style.css"];
+    for(i=0;i<cssRef.length;i++){
+        (function(href){
+            var cb = function() {
+                var l = document.createElement('link'); l.rel = 'stylesheet';
+                console.log(href);
+                l.href = href;
+                var h = document.getElementsByTagName('head')[0];
+                h.parentNode.insertBefore(l, h);
+            };
+            var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                    webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) raf(cb);
+            else window.addEventListener('load', cb);
+        })(cssRef[i]);
+    };
+</script>
+
 </body>
 </html>

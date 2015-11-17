@@ -45,7 +45,7 @@ dl:first-child{margin-top:0;}
   >strong{display:inline-block;padding-right:20px;.eng();font-size:24px;}
   >span{display:inline-block;padding-top:8px;float:right;.kor();font-size:12px;color:#666;}
 }
-.t_secH2{padding-bottom:20px;width:100%;.kor();font-size:24px;
+.t_secH2{padding-bottom:20px;width:100%;.kor();font-size:24px;line-height:1.3;
   strong{color:@brand-warning;}
 }
 aside .secH2{.eng(400);font-size:18px;}
@@ -113,7 +113,8 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
   li{padding:15px 0;border-bottom:1px solid @borderColor;}
   span.date{display:inline-block;padding-right:15px;color:@font-color-lightgray;}
   a{display:inline-block;color:@font-color-darkgray;}
-  span.cnt{display:inline-block;color:@brand-warning;}
+  // span.cnt{display:inline-block;color:@brand-warning;}
+  span.cnt{display:none;}
 }
 
 // 페이징 영역
@@ -121,6 +122,7 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
   .pagination{.eng();
     li{
       &.prev,&.next{ a{color:@brand-warning;} }
+      &.disabled a{color:@font-color-darkgray;background: @font-color-lightgray;}
     }
     a{color:@font-color-gray;  }
   }
@@ -140,7 +142,7 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
   }
   .l{float:left;}
 
-  .article{padding:30px 0;}
+  .article{padding:30px 0;line-height:1.3;font-size:14px;}
 
   .author{text-align:right;padding-bottom:5px;}
 
