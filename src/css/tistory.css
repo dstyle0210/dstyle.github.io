@@ -334,6 +334,9 @@ footer {
   font-weight: 400;
   font-size: 36px;
 }
+.profileSec .info h1 a {
+  color: #333333;
+}
 .profileSec .info p.job {
   padding-top: 15px;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -404,6 +407,7 @@ footer {
 }
 .searchListSec a {
   display: inline-block;
+  color: #333333;
 }
 .searchListSec span.cnt {
   display: inline-block;
@@ -443,6 +447,9 @@ footer {
 .entrySec .r {
   float: right;
   white-space: nowrap;
+}
+.entrySec .r a {
+  color: #999999;
 }
 .entrySec .l {
   float: left;

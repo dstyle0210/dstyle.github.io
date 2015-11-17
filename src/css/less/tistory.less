@@ -79,7 +79,9 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
   .photo{margin:0 auto;box-sizing:border-box;padding:10px;.border(@borderColor);width:150px;height:150px;.rounded(3px);background: #FFFFFF;}
   .info{text-align:center;
     *{margin:0;padding:0;}
-    h1{padding-top:20px;.eng(400);font-size:36px;}
+    h1{padding-top:20px;.eng(400);font-size:36px;
+      a{color:@font-color-darkgray;}
+    }
     p.job{padding-top:15px;.engsub();font-size:14px;text-transform: uppercase;color:@fontColor;}
     p.desc{padding-top:5px;.kor();font-size:13px;color:@fontColor;}
   }
@@ -110,7 +112,7 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
   ol,ul,li{list-style:none;padding:0;margin:0;}
   li{padding:15px 0;border-bottom:1px solid @borderColor;}
   span.date{display:inline-block;padding-right:15px;color:@font-color-lightgray;}
-  a{display:inline-block;}
+  a{display:inline-block;color:@font-color-darkgray;}
   span.cnt{display:inline-block;color:@brand-warning;}
 }
 
@@ -133,7 +135,9 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
     .t_secH2{padding-bottom:10px;}
   }
   .opt{padding-top:5px;width:100%;overflow:hidden;font-size:12px;}
-  .r{float:right;white-space:nowrap;}
+  .r{float:right;white-space:nowrap;
+    a{color:@font-color-lightgray;}
+  }
   .l{float:left;}
 
   .article{padding:30px 0;}
