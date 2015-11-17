@@ -624,7 +624,7 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 95%;
+  max-width: 90%;
   display: inline-block;
 }
 @media print {
@@ -759,9 +759,11 @@ footer {
   }
 }
 @media (min-width: 992px) {
-  .portfolioListSec .site dl,
+  .portfolioListSec .site dl {
+    width: 60%;
+  }
   .portfolioListSec .site .addData {
-    width: 50%;
+    width: 40%;
   }
 }
 .contactSec {
