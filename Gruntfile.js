@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 files: {                                   // Dictionary of files
                     'index.html': 'src/index.html',     // 'destination': 'source'
                     'portfolio.html': 'src/portfolio.html',
-                    'outdateBrowser.html': 'src/outdateBrowser.html'
+                    'outdatedBrowser.html': 'src/outdatedBrowser.html'
                 }
             }
         },
