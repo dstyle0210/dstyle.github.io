@@ -482,6 +482,9 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #cccccc;
 }
+.entryProtected {
+  padding: 50px 0;
+}
 aside .asideSec {
   padding-bottom: 20px;
 }
