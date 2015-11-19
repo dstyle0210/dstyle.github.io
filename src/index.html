@@ -383,8 +383,18 @@
     </div>
 </section>
 <footer>Copyright© 2015 YongBong,Won (A.K.A Dstyle) All rights reserved.</footer>
-
-
+<!--[if lt IE 9]>
+<script>
+window.onload = function(){
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform',
+        languagePath: 'outdatedBrowser.html'
+    });
+};
+</script>
+<![endif]-->
 <script type="text/javascript" data-main="js/dstyle" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
 <script>
     var cssRef = ["https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css",
@@ -406,14 +416,6 @@
                 });
             })(cssRef[i]);
         };
-    }else{
-        //DOM ready function 안에 코드를 넣으세요.
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'borderSpacing',
-            languagePath: 'http://dstyle0210.github.io/outdatedBrowser.html'
-        });
     };
 </script>
 

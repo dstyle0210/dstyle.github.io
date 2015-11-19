@@ -16,15 +16,6 @@
     <meta name="Location" content="South Korea" />
     <meta name="Distribution" content="global" />
     <meta name="author" content="Dstyle(dstyle0210@gmail.com)" />
-    <meta property="og:title" content="Dstyle, Front-End Developer , Web Publisher" />
-    <meta property="og:url" content="http://dstyle0210.github.io" />
-    <meta property="og:image" content="http://dstyle0210.github.io/image/mark.jpg" />
-    <meta property="og:description" content="웹퍼블리셔, 프론트앤드 개발자로 활동하고 있습니다." />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Dstyle, Front-End Developer , Web Publisher" />
-    <meta name="twitter:url" content="http://dstyle0210.github.io" />
-    <meta name="twitter:image" content="http://dstyle0210.github.io/image/mark.jpg" />
-    <meta name="twitter:description" content="웹퍼블리셔, 프론트앤드 개발자로 활동하고 있습니다." />
 
 
     <!--검색봇(크롤링)-->
@@ -157,24 +148,49 @@ todo 비밀번호 입력 부분 만들기.
                 </s_list>
                 <!-- // 검색결과 -->
 
+                <!-- 비밀번호 확인 -->
+                <s_article_protected>
+                    <div class="entryProtectedSec">
+                        <div class="titleWrap">
+                            <div class="tit"><h2 class="t_secH2">[##_article_rep_title_##]</h2></div>
+                            <div class="opt">
+                                <div class="r">
+                                    <a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a> , [##_article_rep_date_##]
+                                </div>
+                                <div class="l">
+                                    <s_ad_div>
+                                        <div class="admin">
+                                            <a href="[##_s_ad_m_link_##]">수정</a> :
+                                            <a href="#" onclick="[##_s_ad_m_onclick_##]">수정(창으로)</a> |
+                                            ([##_s_ad_s1_label_##])→<a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> |
+                                            <a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a> |
+                                            <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+                                        </div>
+                                    </s_ad_div>
+                                </div>
+                            </div>
 
+                            <div class="row">
+                                <div class="col-xs-8 col-xs-offset-2">
+                                    <p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
+                                    <div class="input-group">
+                                        <label for="[##_article_password_##]" class="input-group-addon">비밀번호</label>
+                                        <input type="text" class="form-control" placeholder="password" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]" />
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info" type="submit" onclick="[##_article_dissolve_##]">Go!</button>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </s_article_protected>
+                <!-- // 비밀번호 확인 -->
 
                 <!-- 아티클영역 -->
                 <s_article_rep>
                 <div class="entrySec">
-                    <s_article_protected>
-                        <div class="entryProtected">
-                            <div class="titleWrap">
-                                <div class="tit"><h2 class="t_secH2">[##_article_rep_title_##]</h2></div>
-                                <span class="date">[##_article_rep_date_##]</span>
-                                <p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
-                                <p><label for="[##_article_password_##]">비밀번호 ::</label>
-                                    <input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]" />
-                                    <input type="button" class="submit" value="submit" onclick="[##_article_dissolve_##]" />
-                                </p>
-                            </div>
-                        </div>
-                    </s_article_protected>
                     <div class="titleWrap">
                         <div class="tit"><h2 class="t_secH2">[##_article_rep_title_##]</h2></div>
                         <div class="opt">

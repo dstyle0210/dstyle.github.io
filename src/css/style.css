@@ -179,6 +179,11 @@ dl {
 dl:first-child {
   margin-top: 0;
 }
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .progress {
   margin-bottom: 0;
   background-color: #fff;
@@ -457,6 +462,7 @@ footer {
 .exSec .experienceSec > article li {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .exSec .experienceSec > article li {
   padding: 10px 0;
