@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LessManager">
+    <option name="lessProfileMap">
+      <map>
+        <entry key="0">
+          <value>
+            <LessProfile>
+              <option name="cssDirectories">
+                <list>
+                  <CssDirectory>
+                    <option name="path" value="C:\gitspace\dstyle0210.github.io\src\css" />
+                  </CssDirectory>
+                </list>
+              </option>
+              <option name="id" value="0" />
+              <option name="lessDirPath" value="C:\gitspace\dstyle0210.github.io\src\css\less" />
+              <option name="name" value="dstyle0210.github.io" />
+            </LessProfile>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
