@@ -123,6 +123,17 @@ todo  카테고리 모바일로 넘어오면 메뉴 줄이기 => 상단 버튼�
                                     [##_category_list_##]
                                 </nav>
                             </div>
+
+                            <div class="asideSec categoryMoSec visible-xs">
+                                <h2 class="secH2">CATEGORY</h2>
+                                <div class="input-group">
+                                    <select name="" id="categorySelect" class="form-control"></select>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="categorySelectGo">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+
                         </s_sidebar_element>
                         <!-- // 카테고리 -->
 
@@ -259,7 +270,65 @@ todo  카테고리 모바일로 넘어오면 메뉴 줄이기 => 상단 버튼�
                     $(this).remove();
                 });
             };
+
+
+            var cate = tistoryCategoryJson("#categoryNav nav");
+            _.each(cate.category,function(item,idx){
+                var tit = item.title;
+                _.each(item.dep2,function(dep2,dep2Idx){
+                    $("#categorySelect").append("<option value='"+dep2.link+"'>"+tit+">"+dep2.title+"</option>");
+                });
+            });
+
+
+            $("#categorySelectGo").on("click",function(){
+                location.href = $("#categorySelect").val();
+            });
+
+
+
         });
+        function tistoryCategoryJson(oId){
+            var o = {};
+
+            // 데이터 추출
+            function data(tg,dom){
+                tg.link = $(dom).find(">li>a").attr("href");
+                tg.cnt = $(dom).find(">li>a>span").text();
+                $(dom).find(">li>a>span").remove();
+                tg.title = $(dom).find(">li>a").text();
+            }
+            function data2(tg,dom){
+                tg.link = $(dom).find(">a").attr("href");
+                tg.cnt = $(dom).find(">a>span").text();
+                $(dom).find("a>span").remove();
+                tg.title = $(dom).find(">a").text();
+            }
+
+            function inDep3(tg,dom){
+                if($(dom).find(">ul").length){
+                    tg.dep2 = [];
+                    $(dom).find(">ul>li").each(function(i,item){
+                        tg.dep2[i] = {};
+                        data2(tg.dep2[i],$(dom).find(">ul>li").eq(i));
+                    });
+                }
+            }
+
+            // 분류전체보기 추출
+            o.total = {};
+            data(o.total,oId+">ul");
+
+            // 카테고리 추출
+            o.category = [];
+            $(oId+">ul>li>ul>li").each(function(i,item){
+                o.category[i] = {};
+                data2(o.category[i],$(oId+">ul>li>ul>li").eq(i));
+                inDep3(o.category[i],$(oId+">ul>li>ul>li").eq(i));
+            });
+
+            return o;
+        };
     </script>
 </s_t3>
 </body>
