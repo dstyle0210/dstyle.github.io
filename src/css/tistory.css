@@ -104,6 +104,9 @@ body .btn-imagemap.btn-fixed span,
 body .btn-imagemap:hover span {
   color: #333;
 }
+html {
+  -webkit-text-size-adjust: none;
+}
 body {
   background: url('../images/bg.png');
   font-family: 'NanumBarunGothic', sans-serif;
