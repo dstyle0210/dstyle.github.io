@@ -1,43 +1,126 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        a{
+            text-decoration: none;
+        }
+        table {
+            font-family: 'Nanum Pen Script', serif;
+            font-size:x-large;
+        }
+        table>tbody>tr:nth-child(2n){
+            background:yellow;
+
+        }
+
+        table>tbody>tr:nth-child(2n+1){
+            background:orange;
+
+        }
+        td:hover{
+            background:black;
+            color:white;
+        }
+        .s{
+            background:black;
+            color: white;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var num=1;
+
+            function display(data){
+                var output='';
+                var items = $(data).find('item');
+                items.each(function(index,item){
+                    with(item){
+                        var title = $(this).find('title').text();
+                        var link = $(this).find('link').text();
+                        var img = $(this).find('image').text();
+                        var lprice = $(this).find('lprice').text();
+                        var hprice = $(this).find('hprice').text();
+                        var mallName = $(this).find('mallName').text();
+                        var productId = $(this).find('productId').text();
+                        var productType = $(this).find('productType').text();
+
+                        output += '<table border = "1">';
+                        output += '<tr>';
+                        output += '<td rowspan=\"4\">';
+                        output += '<img width=\"300\"height=\"300\"src=\"'+img+'\">';
+                        output += '</td>';
+                        output += '<td>';
+                        output += 'TYPE: '+productType+' / '+'ID: '+productId;
+                        output += '</td>';
+                        output += '</tr>';
+                        output += '<tr>';
+                        output += '<td>';
+                        output += 'TITLE: '+title;
+                        output += '</td>';
+                        output += '</tr>';
+                        output += '<tr>';
+                        output += '<td>';
+                        output += 'PRICE: '+lprice+' ~ '+hprice+'ø¯';
+                        output += '</td>';
+                        output += '</tr>';
+                        output += '<tr>';
+                        output += '<td align=\"center\">';
+                        output += 'MallName: '+mallName+' / ∏µ≈©: '+'<a href=\"'+link+'\">'+' ªÛºº∆‰¿Ã¡ˆ∑Œ ¿Ãµø'+'</a>';
+                        output += '</td>';
+                        output += '</tr>';
+                        output += '</table>';
+
+                    }
+                });
+
+                $('body').append(output);
+
+
+            };
+
+            function requestAjax(searchWord){
+                var uri = 'http://openapi.naver.com/search?key=c1b406b32dbbbbeee5f2a36ddc14067f&query='+searchWord+'&display=5&start='+num+'&target=shop&sort=sim';
+
+                $.ajax({
+                    url:encodeURI(uri),
+                    type:'GET',
+                    success:function(data){
+                        display(data);
+                    }
+                });
+            };
+
+            $('#search').click(function(){
+                $('table').remove();
+                num=1;
+                var searchWord = $('#category').val();
+                requestAjax(searchWord);
+
+            });
+
+            $(window).scroll(function(){
+                var docH = $(document).height(); //document¿« ≥Ù¿Ã
+                var scrollH = $(window).height()+$(window).scrollTop();
+
+                if(scrollH + 50 >= docH){
+                    num+=5;
+                    var searchWord = $('#category').val();
+                    requestAjax(searchWord);
+
+                }
+            });
+
+        });
+    </script>
 </head>
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript">
-$(function(){
-    /*$.ajax({
-        url:"http://openapi.naver.com/search?key=c1b406b32dbbbbeee5f2a36ddc14067f&query=ÎÖ∏Ìä∏Î∂Å&display=5&start=1&target=shop&sort=sim",
-
-    })*/
-
-    $.ajax({
-        url: "http://openapi.naver.com/search?key=c1b406b32dbbbbeee5f2a36ddc14067f&query=ÎÖ∏Ìä∏Î∂Å&display=5&start=1&target=shop&sort=sim",
-        type: 'GET',
-        crossDomain: true,
-        success: function(response) {
-            console.log(response);
-        },
-        error: function(xhr, status, err) {
-
-        }
-    });
-    $.ajax({
-        url: "http://openapi.naver.com/search?key=de1bd8417045b27608284610e5e1b6f4&query=Ï°∞Îçò&display=5&start=1&target=shop&sort=sim",
-        type: 'GET',
-        crossDomain: true,
-        success: function(response) {
-            console.log(response);
-        },
-        error: function(xhr, status, err) {
-
-        }
-    });
-
-
-});
-</script>
+<h1>Naver Shopping</h1>
+<span>Category:</span><input type="text" id="category"><input type="button" value="∞Àªˆ" id="search">
 </body>
 </html>
