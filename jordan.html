@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    /*$.ajax({
+        url:"http://openapi.naver.com/search?key=c1b406b32dbbbbeee5f2a36ddc14067f&query=노트북&display=5&start=1&target=shop&sort=sim",
+
+    })*/
+
+    $.ajax({
+        url: "http://openapi.naver.com/search?key=c1b406b32dbbbbeee5f2a36ddc14067f&query=노트북&display=5&start=1&target=shop&sort=sim",
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(xhr, status, err) {
+
+        }
+    });
+    $.ajax({
+        url: "http://openapi.naver.com/search?key=de1bd8417045b27608284610e5e1b6f4&query=조던&display=5&start=1&target=shop&sort=sim",
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(xhr, status, err) {
+
+        }
+    });
+
+
+});
+</script>
+</body>
+</html>
