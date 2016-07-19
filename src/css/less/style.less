@@ -24,6 +24,11 @@ body{background:url('../images/bg.png');.kor();font-size:13px;letter-spacing:0;}
   border:@px @line @color;
 }
 
+// font awesome
+.fa-tistory{display:inline-block;width:15px;height:15px;line-height:1.5;background:url('../images/icoTistroy.png') no-repeat 0 1px;background-size:14px 14px;}
+.fa-tistory:before{content:"";}
+
+
 // bootstrap custom or add
 h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 dl{margin-top:20px;margin-bottom:0;}
@@ -93,7 +98,10 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
     .goto{text-align:left;}
   }
   @media (min-width: 992px) {
-    .goto{text-align:right;padding-top:85px;}
+    .goto{text-align:right;padding-top:85px;
+    	*{vertical-align:top;}
+    	i{margin-top:2px;}
+    }
   }
 
 }

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 body .btn-dstyle {
   border: 1px solid #ccc;
   background: #fff;
@@ -282,7 +282,7 @@ aside .secH2 {
   box-sizing: border-box;
   width: 100%;
   padding: 0 4%;
-  border: 1px dashed #999999;
+  border: 1px dashed #999;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -327,7 +327,7 @@ footer {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   width: 150px;
   height: 150px;
   -webkit-border-radius: 3px;
@@ -349,7 +349,7 @@ footer {
   font-size: 36px;
 }
 .profileSec .info h1 a {
-  color: #333333;
+  color: #333;
 }
 .profileSec .info p.job {
   padding-top: 15px;
@@ -357,7 +357,7 @@ footer {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  color: #666666;
+  color: #666;
 }
 .profileSec .info p.desc {
   padding-top: 5px;
@@ -365,7 +365,7 @@ footer {
   font-weight: 400;
   letter-spacing: -1px;
   font-size: 13px;
-  color: #666666;
+  color: #666;
 }
 .profileSec .goto {
   text-align: center;
@@ -407,16 +407,16 @@ footer {
 }
 .searchListSec li {
   padding: 15px 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 .searchListSec span.date {
   display: inline-block;
   padding-right: 15px;
-  color: #999999;
+  color: #999;
 }
 .searchListSec a {
   display: inline-block;
-  color: #333333;
+  color: #333;
 }
 .searchListSec span.cnt {
   display: none;
@@ -433,11 +433,11 @@ footer {
   color: #f0ad4e;
 }
 .pagingSec .pagination li.disabled a {
-  color: #333333;
-  background: #999999;
+  color: #333;
+  background: #999;
 }
 .pagingSec .pagination a {
-  color: #666666;
+  color: #666;
 }
 .entrySec .titleWrap,
 .entryProtectedSec .titleWrap {
@@ -447,7 +447,7 @@ footer {
 .entrySec .tit,
 .entryProtectedSec .tit {
   width: 100%;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 .entrySec .tit .t_secH2,
 .entryProtectedSec .tit .t_secH2 {
@@ -467,7 +467,7 @@ footer {
 }
 .entrySec .r a,
 .entryProtectedSec .r a {
-  color: #999999;
+  color: #999;
 }
 .entrySec .l,
 .entryProtectedSec .l {
@@ -489,7 +489,7 @@ footer {
 .entryProtectedSec .tagTrail {
   width: 100%;
   padding-top: 5px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
 }
 .entryProtected {
   padding: 50px 0;
@@ -510,7 +510,7 @@ aside .categorySec a {
 aside .categorySec nav > ul > li > a {
   display: inline-block;
   padding-bottom: 5px;
-  color: #333333;
+  color: #333;
   font-weight: 700;
   font-size: 16px;
 }
@@ -519,13 +519,13 @@ aside .categorySec nav > ul > li > ul > li {
   border-top: 1px dashed #333;
 }
 aside .categorySec nav > ul > li > ul > li > a {
-  color: #333333;
+  color: #333;
   font-weight: 700;
   padding-left: 5px;
 }
 aside .categorySec nav > ul > li > ul > li > ul > li > a {
   display: inline-block;
   padding-left: 17px;
-  color: #666666;
+  color: #666;
   font-weight: 400;
 }

@@ -58,22 +58,20 @@ module.exports = function(grunt) {
                 }
             }
         },
-        imagemin: {                          // Task
-            dist: {                         // Another target
-                files: [{
-                    expand: true,                  // Enable dynamic expansion
-                    cwd: 'src/images',                   // Src matches are relative to this path
-                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-                    dest: './images'                  // Destination path prefix
-                }]
-            }
-        }
+        less: {
+        	  dev: {
+        	    files: {
+        	      './src/css/style.css': './src/css/less/style.less',
+        	      './src/css/tistory.css': './src/css/less/tistory.less'
+        	    }
+        	  }
+        	}
     });
 
     for (var key in grunt.file.readJSON("package.json").devDependencies) {
         if (key !== "grunt" && key.indexOf("grunt") === 0) grunt.loadNpmTasks(key);
     };
 
-    grunt.registerTask('default', ['htmlmin:dist','uglify:js','csscomb','cssmin','imagemin:dist']);
+    grunt.registerTask('default', ['htmlmin:dist','uglify:js','csscomb','cssmin']);
 
 };
