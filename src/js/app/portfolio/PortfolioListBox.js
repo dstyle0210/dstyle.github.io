@@ -25,6 +25,11 @@ define(["react"], function (React) {
                                 "dd",
                                 null,
                                 site.desc
+                            ),
+                            React.createElement(
+                                "dd",
+                                null,
+                                site.skill
                             )
                         ),
                         React.createElement(

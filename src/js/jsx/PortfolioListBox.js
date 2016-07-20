@@ -12,6 +12,7 @@ define(["react"],function(React){
                         <dl>
                             <MakeSiteTitleBox name={site.name} link={site.url} />
                             <dd>{site.desc}</dd>
+                            <dd>{site.skill}</dd>
                         </dl>
                         <div className="addData">
                             <div className="role">{site.position}</div>

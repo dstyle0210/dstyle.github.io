@@ -621,7 +621,7 @@ footer {
 }
 .portfolioSec .site {
   margin-top: 30px;
-  height: 65px;
+  height: 85px;
   padding: 0 15px;
   border-left: 2px solid #666;
 }
@@ -685,6 +685,14 @@ footer {
   .portfolioSec .site.eq7 {
     margin-bottom: 0;
   }
+}
+.portfolioSec .site .skill {
+  padding-bottom: 5px;
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 12px;
+  color: #333;
 }
 .portfolioSec .loadProtfolioDiv {
   padding-top: 20px;

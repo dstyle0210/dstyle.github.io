@@ -58,20 +58,47 @@ module.exports = function(grunt) {
                 }
             }
         },
-        less: {
-        	  dev: {
-        	    files: {
-        	      './src/css/style.css': './src/css/less/style.less',
-        	      './src/css/tistory.css': './src/css/less/tistory.less'
-        	    }
-        	  }
-        	}
+		less : {
+			dev : {
+				files : {
+					'./src/css/style.css' : './src/css/less/style.less',
+					'./src/css/tistory.css' : './src/css/less/tistory.less'
+				}
+			}
+		},
+		watch : {
+			less: {
+				files : [ "./src/css/less/*.less" ],
+				tasks : [ 'less' ]
+			},
+			jsx:{
+				files:["./src/js/jsx/*.js"],
+				tasks:["babel"]
+			}
+		},
+		babel : {
+			options : {
+				plugins : [ 'transform-react-jsx' ],
+				presets : [ 'es2015', 'react' ]
+			},
+			jsx : {
+				files : [ {
+					expand : true,
+					cwd : './src/js/jsx/', // Custom folder
+					src : [ '*.js' ],
+					dest : './src/js/app/portfolio/', // Custom folder
+					ext : '.js'
+				} ]
+			}
+		}
     });
 
     for (var key in grunt.file.readJSON("package.json").devDependencies) {
         if (key !== "grunt" && key.indexOf("grunt") === 0) grunt.loadNpmTasks(key);
     };
 
-    grunt.registerTask('default', ['htmlmin:dist','uglify:js','csscomb','cssmin']);
+    
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('dist', ['htmlmin:dist','uglify:js','csscomb','cssmin']);
 
 };
