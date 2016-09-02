@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 body .btn-dstyle {
   border: 1px solid #ccc;
   background: #fff;
@@ -163,6 +163,17 @@ body {
 .col-xs-9 {
   overflow: hidden;
 }
+.fa-tistory {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 1.5;
+  background: url('../images/icoTistroy.png') no-repeat 0 1px;
+  background-size: 14px 14px;
+}
+.fa-tistory:before {
+  content: "";
+}
 h1,
 h2,
 h3,
@@ -265,7 +276,7 @@ li {
   box-sizing: border-box;
   width: 100%;
   padding: 0 4%;
-  border: 1px dashed #999999;
+  border: 1px dashed #999;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -310,7 +321,7 @@ footer {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   width: 150px;
   height: 150px;
   -webkit-border-radius: 3px;
@@ -337,7 +348,7 @@ footer {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  color: #666666;
+  color: #666;
 }
 .profileSec .info p.desc {
   padding-top: 5px;
@@ -345,7 +356,7 @@ footer {
   font-weight: 400;
   letter-spacing: -1px;
   font-size: 13px;
-  color: #666666;
+  color: #666;
 }
 .profileSec .goto {
   text-align: center;
@@ -379,6 +390,12 @@ footer {
     text-align: right;
     padding-top: 85px;
   }
+  .profileSec .goto * {
+    vertical-align: top;
+  }
+  .profileSec .goto i {
+    margin-top: 2px;
+  }
 }
 .cvSec .informationSec {
   padding-top: 50px;
@@ -387,7 +404,7 @@ footer {
   margin: 20px 0 0;
   width: 100%;
   overflow: hidden;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 .cvSec .informationSec dl:first-child {
   margin-top: 0;
@@ -604,7 +621,7 @@ footer {
 }
 .portfolioSec .site {
   margin-top: 30px;
-  height: 65px;
+  height: 85px;
   padding: 0 15px;
   border-left: 2px solid #666;
 }
@@ -668,6 +685,14 @@ footer {
   .portfolioSec .site.eq7 {
     margin-bottom: 0;
   }
+}
+.portfolioSec .site .skill {
+  padding-bottom: 5px;
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 12px;
+  color: #333;
 }
 .portfolioSec .loadProtfolioDiv {
   padding-top: 20px;

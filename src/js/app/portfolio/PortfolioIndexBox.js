@@ -2,6 +2,7 @@
 
 var PortfolioIndexBox;
 var MakeLabelBox;
+var MakeSkillBox;
 var MakeSiteTitleBox;
 define(["react"], function (React) {
     PortfolioIndexBox = React.createClass({
@@ -27,6 +28,7 @@ define(["react"], function (React) {
                                 site.desc
                             )
                         ),
+                        React.createElement(MakeSkillBox, { skill: site.skill }),
                         React.createElement(MakeLabelBox, { device: site.device, per: site.per, employee: site.employee })
                     )
                 );
@@ -35,6 +37,19 @@ define(["react"], function (React) {
                 "ul",
                 { className: "portfolioList row" },
                 sites
+            );
+        }
+    });
+
+    // 프로젝트 사용 기술영역
+    MakeSkillBox = React.createClass({
+        displayName: "MakeSkillBox",
+
+        render: function render() {
+            return React.createElement(
+                "div",
+                { className: "skill" },
+                this.props.skill
             );
         }
     });

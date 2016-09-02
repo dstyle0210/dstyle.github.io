@@ -24,6 +24,11 @@ body{background:url('../images/bg.png');.kor();font-size:13px;letter-spacing:0;}
   border:@px @line @color;
 }
 
+// font awesome
+.fa-tistory{display:inline-block;width:15px;height:15px;line-height:1.5;background:url('../images/icoTistroy.png') no-repeat 0 1px;background-size:14px 14px;}
+.fa-tistory:before{content:"";}
+
+
 // bootstrap custom or add
 h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
 dl{margin-top:20px;margin-bottom:0;}
@@ -93,7 +98,10 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
     .goto{text-align:left;}
   }
   @media (min-width: 992px) {
-    .goto{text-align:right;padding-top:85px;}
+    .goto{text-align:right;padding-top:85px;
+    	*{vertical-align:top;}
+    	i{margin-top:2px;}
+    }
   }
 
 }
@@ -199,7 +207,7 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
   .portfolioList{margin:0;padding:0;
     >li{margin:0;padding:0;list-style:none;}
   }
-  .site{margin-top:30px;height:65px;padding:0 15px;border-left:2px solid #666;
+  .site{margin-top:30px;height:85px;padding:0 15px;border-left:2px solid #666;
     @media print{
       &{margin-top:10px;}
     }
@@ -221,6 +229,7 @@ footer{.engsub();padding:20px 0;text-align:center;color:#fff;font-size:14px;}
       &.eq2{margin-top:0;}
       &.eq6,&.eq7{margin-bottom:0;}
     }
+    .skill{padding-bottom:5px;.kor();font-size:12px;color:#333;}
   }
   .loadProtfolioDiv{
     padding-top:20px;text-align:right;
