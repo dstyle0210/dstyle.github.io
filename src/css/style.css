@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Muli|Pacifico');
 body .btn-dstyle {
   border: 1px solid #ccc;
   background: #fff;
@@ -103,6 +103,31 @@ body .btn-imagemap:hover i {
 body .btn-imagemap.btn-fixed span,
 body .btn-imagemap:hover span {
   color: #333;
+}
+body .btn-gulpsetting {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+body .btn-gulpsetting i {
+  color: #666;
+}
+body .btn-gulpsetting span {
+  font-family: 'Oswald', cursive;
+  font-weight: 400;
+}
+body .btn-gulpsetting.btn-fixed,
+body .btn-gulpsetting:hover {
+  background: #252525;
+  border: 1px solid #adadad;
+}
+body .btn-gulpsetting.btn-fixed i,
+body .btn-gulpsetting:hover i {
+  color: #ff6600;
+}
+body .btn-gulpsetting.btn-fixed span,
+body .btn-gulpsetting:hover span {
+  color: #ccc;
 }
 body {
   background: url('../images/bg.png');
@@ -276,7 +301,7 @@ li {
   box-sizing: border-box;
   width: 100%;
   padding: 0 4%;
-  border: 1px dashed #999;
+  border: 1px dashed #999999;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -321,7 +346,7 @@ footer {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   width: 150px;
   height: 150px;
   -webkit-border-radius: 3px;
@@ -348,7 +373,7 @@ footer {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  color: #666;
+  color: #666666;
 }
 .profileSec .info p.desc {
   padding-top: 5px;
@@ -356,7 +381,7 @@ footer {
   font-weight: 400;
   letter-spacing: -1px;
   font-size: 13px;
-  color: #666;
+  color: #666666;
 }
 .profileSec .goto {
   text-align: center;
@@ -404,7 +429,7 @@ footer {
   margin: 20px 0 0;
   width: 100%;
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 .cvSec .informationSec dl:first-child {
   margin-top: 0;
