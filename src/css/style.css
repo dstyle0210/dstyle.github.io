@@ -769,6 +769,10 @@ footer {
 }
 .portfolioListSec .site dt {
   display: inline-block;
+  width: 100%;
+}
+.portfolioListSec .site dt * {
+  vertical-align: top;
 }
 .portfolioListSec .site dt strong {
   font-size: 16px;
@@ -777,7 +781,8 @@ footer {
   font-weight: 700;
   letter-spacing: -1px;
   color: #333;
-  max-width: 100%;
+  display: inline-block;
+  max-width: 89%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
