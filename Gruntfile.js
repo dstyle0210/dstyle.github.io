@@ -74,6 +74,6 @@ module.exports = function(grunt) {
         if (key !== "grunt" && key.indexOf("grunt") === 0) grunt.loadNpmTasks(key);
     };
 
-    grunt.registerTask('default', ['htmlmin:dist','csscomb','cssmin','imagemin:dist']);
+    grunt.registerTask('default', ['htmlmin:dist','csscomb','cssmin']);
 
 };
