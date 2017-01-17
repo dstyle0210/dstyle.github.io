@@ -123,3 +123,27 @@ body .btn-gulpsetting.btn-fixed span,
 body .btn-gulpsetting:hover span {
   color: #ccc;
 }
+body .btn-generatordstyle {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+body .btn-generatordstyle i {
+  color: #666;
+}
+body .btn-generatordstyle span {
+  font-family: 'Oswald', cursive;
+  font-weight: 400;
+}
+body .btn-generatordstyle.btn-fixed,
+body .btn-generatordstyle:hover {
+  border: 1px solid #adadad;
+}
+body .btn-generatordstyle.btn-fixed i,
+body .btn-generatordstyle:hover i {
+  color: #333;
+}
+body .btn-generatordstyle.btn-fixed span,
+body .btn-generatordstyle:hover span {
+  color: #ccc;
+}
